@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Rose Costa | Artist & Designer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #FFFFFF;
+            --light-green: #B8D4B8;
+            --dark-green: #4A7C59;
+            --light-purple: #D4B5D4;
+            --dark-purple: #7B4B7B;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-purple);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--dark-green);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark-purple);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        /* Banner */
+        .banner {
+            margin-top: 70px;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .banner-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-purple);
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--light-purple) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-placeholder {
+            color: var(--dark-purple);
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--dark-purple);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--dark-green);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .social-btn.etsy {
+            background-color: var(--dark-purple);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: var(--dark-purple);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content strong {
+            color: var(--dark-green);
+        }
+
+        /* Services Section */
+        #services {
+            background-color: #F8F9FA;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-green) 100%);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-purple);
+            font-style: italic;
+        }
+
+        .service-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card .price {
+            color: var(--dark-purple);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .order-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--dark-purple);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: var(--dark-green);
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--light-purple) 100%);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-purple);
+            font-style: italic;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .load-more {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .load-more-btn {
+            padding: 1rem 2rem;
+            background-color: var(--dark-green);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .load-more-btn:hover {
+            background-color: var(--dark-purple);
+        }
+
+        /* Featured Art Section */
+        #featured {
+            background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-green) 100%);
+            padding: 4rem 2rem;
+        }
+
+        .featured-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background-color: var(--dark-purple);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--dark-purple) 100%);
+            border-radius: 15px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-style: italic;
+        }
+
+        .featured-content h3 {
+            color: var(--dark-purple);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .featured-price {
+            font-size: 2rem;
+            color: var(--dark-green);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #F8F9FA;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-purple);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--light-green);
+            border-radius: 10px;
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--dark-green);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--dark-purple);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--dark-green);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-purple);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer .social-links {
+            margin-bottom: 1rem;
+        }
+
+        footer .social-btn {
+            background-color: var(--white);
+            color: var(--dark-purple);
+        }
+
+        footer p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .social-links {
+                flex-direction: column;
+            }
+
+            .featured-content {
+                padding: 2rem;
+            }
+
+            .featured-image {
+                height: 300px;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Sarah Rose Costa</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-placeholder">
+            [Banner Image: banner.jpg - 1200x200px recommended]
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-image">
+            <div class="hero-placeholder">[Hero Image: hero.jpg - 250x250px]</div>
+        </div>
+        <h1>Sarah Rose Costa</h1>
+        <p>Artist & Designer crafting stories since she could hold a crayon</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/costaandcraftsstudio/" target="_blank" class="social-btn">Instagram</a>
+            <a href="#" target="_blank" class="social-btn etsy">Shop Etsy</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Sarah</h2>
+        <div class="about-content">
+            <p>Art is about telling a story. Artist Sarah Rose Costa has been telling stories since she could hold a crayon. At five years old she <strong>insisted</strong> that every guest in her home go home with a personally written and illustrated book. If she had the time, she still would.</p>
+            
+            <p>These days, Sarah channels that relentless creative energy into custom illustrations, book cover designs, and portraits that capture more than just what's on the surface. Whether you're a person, a pet, or a fantastical creature yet to exist, she's ready to tell your story through art.</p>
+            
+            <p>When she's not wielding a paintbrush or digital stylus, you might find her exploring mixed media (yes, that includes knitting and embroidery—art has no boundaries), perfecting the art of caffeinated beverages, or convincing friends they definitely need a custom portrait of their cat wearing a tiny hat.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services & Commissions</h2>
+        <div class="services-grid">
+            <!-- Solo Portrait -->
+            <div class="service-card">
+                <div class="service-image">[Example: solo-portrait.jpg]</div>
+                <h3>Solo Portrait</h3>
+                <p class="price">Starting at $150</p>
+                <p>Custom illustration of you, yourself, and that winning smile. Perfect for gifts, profiles, or just because you're wonderful.</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+
+            <!-- Duo Portrait -->
+            <div class="service-card">
+                <div class="service-image">[Example: duo-portrait.jpg]</div>
+                <h3>Duo Portrait</h3>
+                <p class="price">Starting at $225</p>
+                <p>Two's company, and twice the artistic challenge. Couples, besties, you and your shadow—we don't judge.</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+
+            <!-- Animal Portrait - Face -->
+            <div class="service-card">
+                <div class="service-image">[Example: animal-face.jpg]</div>
+                <h3>Animal Portrait (Face)</h3>
+                <p class="price">Starting at $125</p>
+                <p>Your pet's adorable face, immortalized forever. Drool and all (optional).</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+
+            <!-- Animal Portrait - Full Body -->
+            <div class="service-card">
+                <div class="service-image">[Example: animal-full.jpg]</div>
+                <h3>Animal Portrait (Full Body)</h3>
+                <p class="price">Starting at $200</p>
+                <p>The complete package—tail wags, toe beans, and personality included.</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+
+            <!-- Book Cover Design -->
+            <div class="service-card">
+                <div class="service-image">[Example: book-cover.jpg]</div>
+                <h3>Book Cover Design</h3>
+                <p class="price">Starting at $400</p>
+                <p>Your story deserves a cover that stops scrollers mid-scroll. Let's make readers judge your book by its cover—in the best way.</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+
+            <!-- Logo Design -->
+            <div class="service-card">
+                <div class="service-image">[Example: logo.jpg]</div>
+                <h3>Logo Design</h3>
+                <p class="price">Starting at $250</p>
+                <p>A standalone logo that captures your brand's essence and looks good on literally everything.</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+
+            <!-- Logo Suite -->
+            <div class="service-card">
+                <div class="service-image">[Example: logo-suite.jpg]</div>
+                <h3>Logo Suite</h3>
+                <p class="price">Starting at $500</p>
+                <p>The full brand identity experience—primary logo, variations, color palette, and all the goodies. Your brand's wardrobe, essentially.</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+
+            <!-- Portfolio Review -->
+            <div class="service-card">
+                <div class="service-image">[Example: portfolio-review.jpg]</div>
+                <h3>Portfolio Review & Tutoring</h3>
+                <p class="price">$100/hour</p>
+                <p>Constructive feedback, creative guidance, and the occasional pep talk. Perfect for artists looking to level up.</p>
+                <a href="#" class="order-btn">Order Yours Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Previous Work</h2>
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Initial 20 portfolio items -->
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-01.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-02.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-03.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-04.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-05.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-06.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-07.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-08.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-09.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-10.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-11.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-12.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-13.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-14.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-15.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-16.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-17.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-18.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-19.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-20.jpg]</div>
+            </a>
+            <!-- Additional items (hidden initially) -->
+            <a href="#" class="portfolio-item hidden" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-21.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item hidden" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-22.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item hidden" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-23.jpg]</div>
+            </a>
+            <a href="#" class="portfolio-item hidden" target="_blank">
+                <div class="portfolio-placeholder">[portfolio-24.jpg]</div>
+            </a>
+        </div>
+        <div class="load-more">
+            <button class="load-more-btn" id="loadMoreBtn">Load More Work</button>
+        </div>
+    </section>
+
+    <!-- Featured Unique Piece Section -->
+    <section id="featured">
+        <h2>Limited Edition: One-of-a-Kind</h2>
+        <div class="featured-content">
+            <span class="featured-badge">🌟 ONLY ONE AVAILABLE</span>
+            <h3>Mixed Media Masterpiece</h3>
+            <div class="featured-image">[featured-artwork.jpg - 900x400px]</div>
+            <p>This week's featured piece explores the intersection of traditional embroidery, digital illustration, and sustainable fashion design. A wearable art piece that doubles as a wall hanging—because why choose?</p>
+            <p><strong>Medium:</strong> Embroidery, Digital Print, Upcycled Fabric, Tiny Dreams</p>
+            <p class="featured-price">$850</p>
+            <a href="#" class="order-btn" style="display: inline-block; margin-top: 1rem;">Claim This Piece</a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);"><em>Limited time only. Once it's gone, it's gone forever. No pressure.</em></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Let's Create Something Together</h2>
+        <div class="contact-container">
+            <form class="contact-form" action="https://formspree.io/f/xnnoqqgo" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell me about your project, your vision, or just say hello!"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/costaandcraftsstudio/" target="_blank" class="social-btn">Instagram</a>
+            <a href="#" target="_blank" class="social-btn etsy">Shop Etsy</a>
+        </div>
+        <p>&copy; 2024 Sarah Rose Costa. All rights reserved. | Made with ☕ and probably too many puns.</p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Load more portfolio items
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item.hidden');
+
+        loadMoreBtn.addEventListener('click', () => {
+            portfolioItems.forEach(item => {
+                item.classList.remove('hidden');
+            });
+            loadMoreBtn.style.display = 'none';
+        });
+
+        // Update Etsy links (placeholder - replace with actual Etsy shop URL)
+        const etsyLinks = document.querySelectorAll('.social-btn.etsy, .order-btn');
+        const etsyURL = 'https://www.etsy.com/shop/YourShopName'; // UPDATE THIS
+        
+        etsyLinks.forEach(link => {
+            if (link.href === window.location.href + '#' || link.href === '#') {
+                link.href = etsyURL;
+            }
+        });
+
+        // Update portfolio item links to Etsy
+        const portfolioLinks = document.querySelectorAll('.portfolio-item');
+        portfolioLinks.forEach(link => {
+            if (link.href === window.location.href + '#' || link.href === '#') {
+                link.href = etsyURL;
+            }
+        });
+
+        // Featured artwork link
+        const featuredLink = document.querySelector('#featured .order-btn');
+        if (featuredLink && (featuredLink.href === window.location.href + '#' || featuredLink.href === '#')) {
+            featuredLink.href = etsyURL;
+        }
+    </script>
+</body>
+</html>
