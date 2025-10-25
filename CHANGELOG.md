@@ -15,12 +15,14 @@ All notable changes to Sarah Rose Costa's portfolio website will be documented i
 - Featured description updated with more casual, artist-focused tone
 - Featured medium updated to: Collage on paper, magazine, embroidery, fabric
 - Navigation menu reordered to match new section flow
+- **Fonts implemented:** Playfair Display for headings, Lora for body text
 
 ### Added
 - Etsy shop link added to footer (alongside Instagram)
 - "Includes 1 edit!" added to Logo Design service
 - "Includes 2 edits!" added to Logo Suite service
 - "Includes 2 edits!" added to Book Cover Design service
+- Google Fonts integration for professional typography
 
 ---
 

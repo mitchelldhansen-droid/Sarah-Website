@@ -16,6 +16,11 @@ This is a single-page scroll website for artist Sarah Rose Costa, featuring:
 - **Light Purple:** #D4B5D4
 - **Dark Purple:** #7B4B7B
 
+## 🔤 Typography
+- **Headings:** Playfair Display (elegant serif)
+- **Body Text:** Lora (readable serif)
+- **Source:** Google Fonts
+
 ## 📁 File Structure
 ```
 /root-folder/
