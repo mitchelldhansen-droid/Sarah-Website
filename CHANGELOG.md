@@ -4,6 +4,18 @@ All notable changes to Sarah Rose Costa's portfolio website will be documented i
 
 ---
 
+## [Version 1.2.1] - 2024-10-25
+
+### Fixed
+- Footer Etsy button now displays in green with white text for better visibility against purple footer background
+- Added hover effect for footer Etsy button (light green on hover)
+
+### Added
+- Custom Commission service card - Starting at $170
+- Covers buildings, houses, groups, landscapes, items, and custom requests
+
+---
+
 ## [Version 1.2.0] - 2024-10-25
 
 ### Changed

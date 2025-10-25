@@ -45,6 +45,10 @@
 → Image representing tutoring/review service
 → Could be: workspace, sketches, teaching moment
 
+**custom-commission.jpg**
+→ Example of custom commission work
+→ Could be: building, landscape, group portrait, or unique item
+
 ---
 
 ## PORTFOLIO IMAGES (250x250px square format recommended)
@@ -102,7 +106,8 @@ If you have existing images, organize them into folders first:
 │   ├── book-cover.jpg
 │   ├── logo.jpg
 │   ├── logo-suite.jpg
-│   └── portfolio-review.jpg
+│   ├── portfolio-review.jpg
+│   └── custom-commission.jpg
 ├── /portfolio/
 │   ├── portfolio-01.jpg
 │   ├── portfolio-02.jpg
@@ -128,6 +133,7 @@ Place in same folder as index.html:
 □ logo.jpg
 □ logo-suite.jpg
 □ portfolio-review.jpg
+□ custom-commission.jpg
 □ portfolio-01.jpg
 □ portfolio-02.jpg
 □ portfolio-03.jpg
@@ -154,7 +160,7 @@ Place in same folder as index.html:
 □ portfolio-24.jpg (optional)
 □ featured-artwork.jpg
 
-**Total: 32 images minimum (28 required + 4 optional)**
+**Total: 33 images minimum (29 required + 4 optional)**
 
 ---
 

@@ -35,6 +35,7 @@ This is a single-page scroll website for artist Sarah Rose Costa, featuring:
 ├── logo.jpg            (Service example)
 ├── logo-suite.jpg      (Service example)
 ├── portfolio-review.jpg (Service example)
+├── custom-commission.jpg (Service example)
 ├── portfolio-01.jpg    (Portfolio pieces)
 ├── portfolio-02.jpg
 ├── ... (up to portfolio-24.jpg)
@@ -53,7 +54,7 @@ This is a single-page scroll website for artist Sarah Rose Costa, featuring:
 - **Size:** 250x250px (square)
 - **Purpose:** Main profile image or logo
 
-### Service Examples (8 total)
+### Service Examples (9 total)
 - **Filenames:** 
   - `solo-portrait.jpg`
   - `duo-portrait.jpg`
@@ -63,6 +64,7 @@ This is a single-page scroll website for artist Sarah Rose Costa, featuring:
   - `logo.jpg`
   - `logo-suite.jpg`
   - `portfolio-review.jpg`
+  - `custom-commission.jpg`
 - **Size:** Flexible (will display at 300x200px in cards)
 - **Purpose:** Example work for each service
 
@@ -113,7 +115,7 @@ const etsyURL = 'https://www.etsy.com/shop/YourShopName'; // UPDATE THIS
 - Highlights creative journey
 
 ### 5. Services Section
-Eight service cards with:
+Nine service cards with:
 - Example image
 - Service name
 - Mock pricing
@@ -128,7 +130,8 @@ Eight service cards with:
 5. Book Cover Design - $400+
 6. Logo Design - $250+
 7. Logo Suite - $500+
-8. Portfolio Review & Tutoring - $100/hour
+8. Portfolio Review & Tutoring - $65/hour
+9. Custom Commission - $170+
 
 ### 6. Portfolio Section
 - Grid of 20+ images
