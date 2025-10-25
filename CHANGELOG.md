@@ -4,6 +4,40 @@ All notable changes to Sarah Rose Costa's portfolio website will be documented i
 
 ---
 
+## [Version 1.2.0] - 2024-10-25
+
+### Changed
+- All buttons now have consistent green hover effect
+- Portfolio Review & Tutoring price reduced to $65/hour
+- Featured Limited Edition price reduced to $200
+- Featured section moved to appear after Services (before Portfolio)
+- Featured section title changed from "Mixed Media Masterpiece" to "Media Collage"
+- Featured description updated with more casual, artist-focused tone
+- Featured medium updated to: Collage on paper, magazine, embroidery, fabric
+- Navigation menu reordered to match new section flow
+
+### Added
+- Etsy shop link added to footer (alongside Instagram)
+- "Includes 1 edit!" added to Logo Design service
+- "Includes 2 edits!" added to Logo Suite service
+- "Includes 2 edits!" added to Book Cover Design service
+
+---
+
+## [Version 1.1.0] - 2024-10-25
+
+### Changed
+- Updated fonts: IvyMode for headings, Athelas for body text
+- Updated Etsy shop URL to actual Costa and Crafts Studio link
+- Added Adobe Fonts integration for custom typography
+
+### Added
+- New "Shop on Etsy" section after contact form
+- Call-to-action button encouraging commissions
+- Direct Etsy shop links throughout site
+
+---
+
 ## [Version 1.0.0] - 2024-10-25
 
 ### ✨ Initial Release

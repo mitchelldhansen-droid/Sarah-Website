@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah Rose Costa | Artist & Designer</title>
+    <link rel="stylesheet" href="https://use.typekit.net/aof8pxz.css">
     <style>
         * {
             margin: 0;
@@ -26,10 +27,14 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'athelas', Georgia, serif;
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'ivymode', Georgia, serif;
         }
 
         /* Navigation */
@@ -55,6 +60,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--dark-purple);
+            font-family: 'ivymode', Georgia, serif;
         }
 
         .nav-menu {
@@ -170,10 +176,15 @@
         .social-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background-color: var(--dark-green);
         }
 
         .social-btn.etsy {
             background-color: var(--dark-purple);
+        }
+        
+        .social-btn.etsy:hover {
+            background-color: var(--dark-green);
         }
 
         /* Section Styling */
@@ -423,7 +434,7 @@
             padding: 0.75rem;
             border: 2px solid var(--light-green);
             border-radius: 10px;
-            font-family: 'Georgia', serif;
+            font-family: 'athelas', Georgia, serif;
             font-size: 1rem;
             transition: border-color 0.3s;
         }
@@ -548,8 +559,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#featured">Featured</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -637,7 +648,7 @@
                 <div class="service-image">[Example: book-cover.jpg]</div>
                 <h3>Book Cover Design</h3>
                 <p class="price">Starting at $400</p>
-                <p>Your story deserves a cover that stops scrollers mid-scroll. Let's make readers judge your book by its cover—in the best way.</p>
+                <p>Your story deserves a cover that stops scrollers mid-scroll. Let's make readers judge your book by its cover—in the best way. <strong>Includes 2 edits!</strong></p>
                 <a href="#" class="order-btn">Order Yours Today</a>
             </div>
 
@@ -646,7 +657,7 @@
                 <div class="service-image">[Example: logo.jpg]</div>
                 <h3>Logo Design</h3>
                 <p class="price">Starting at $250</p>
-                <p>A standalone logo that captures your brand's essence and looks good on literally everything.</p>
+                <p>A standalone logo that captures your brand's essence and looks good on literally everything. <strong>Includes 1 edit!</strong></p>
                 <a href="#" class="order-btn">Order Yours Today</a>
             </div>
 
@@ -655,7 +666,7 @@
                 <div class="service-image">[Example: logo-suite.jpg]</div>
                 <h3>Logo Suite</h3>
                 <p class="price">Starting at $500</p>
-                <p>The full brand identity experience—primary logo, variations, color palette, and all the goodies. Your brand's wardrobe, essentially.</p>
+                <p>The full brand identity experience—primary logo, variations, color palette, and all the goodies. Your brand's wardrobe, essentially. <strong>Includes 2 edits!</strong></p>
                 <a href="#" class="order-btn">Order Yours Today</a>
             </div>
 
@@ -663,10 +674,25 @@
             <div class="service-card">
                 <div class="service-image">[Example: portfolio-review.jpg]</div>
                 <h3>Portfolio Review & Tutoring</h3>
-                <p class="price">$100/hour</p>
+                <p class="price">$65/hour</p>
                 <p>Constructive feedback, creative guidance, and the occasional pep talk. Perfect for artists looking to level up.</p>
                 <a href="#" class="order-btn">Order Yours Today</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Featured Unique Piece Section -->
+    <section id="featured">
+        <h2>Limited Edition: One-of-a-Kind</h2>
+        <div class="featured-content">
+            <span class="featured-badge">🌟 ONLY ONE AVAILABLE</span>
+            <h3>Media Collage</h3>
+            <div class="featured-image">[featured-artwork.jpg - 900x400px]</div>
+            <p>A collage that represents the artist's unique viewpoint on what's happening in the world, and what she wanted to make. Mostly that.</p>
+            <p><strong>Medium:</strong> Collage on paper, magazine, embroidery, fabric</p>
+            <p class="featured-price">$200</p>
+            <a href="#" class="order-btn" style="display: inline-block; margin-top: 1rem;">Claim This Piece</a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);"><em>Limited time only. Once it's gone, it's gone forever. No pressure.</em></p>
         </div>
     </section>
 
@@ -754,21 +780,6 @@
         </div>
     </section>
 
-    <!-- Featured Unique Piece Section -->
-    <section id="featured">
-        <h2>Limited Edition: One-of-a-Kind</h2>
-        <div class="featured-content">
-            <span class="featured-badge">🌟 ONLY ONE AVAILABLE</span>
-            <h3>Mixed Media Masterpiece</h3>
-            <div class="featured-image">[featured-artwork.jpg - 900x400px]</div>
-            <p>This week's featured piece explores the intersection of traditional embroidery, digital illustration, and sustainable fashion design. A wearable art piece that doubles as a wall hanging—because why choose?</p>
-            <p><strong>Medium:</strong> Embroidery, Digital Print, Upcycled Fabric, Tiny Dreams</p>
-            <p class="featured-price">$850</p>
-            <a href="#" class="order-btn" style="display: inline-block; margin-top: 1rem;">Claim This Piece</a>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);"><em>Limited time only. Once it's gone, it's gone forever. No pressure.</em></p>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <h2>Let's Create Something Together</h2>
@@ -795,11 +806,22 @@
         </div>
     </section>
 
+    <!-- Shop Etsy Section -->
+    <section style="text-align: center; padding: 3rem 2rem; background-color: var(--white);">
+        <h2 style="margin-bottom: 1.5rem;">Ready to Commission Your Art?</h2>
+        <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; color: var(--text-light);">
+            Visit the shop to browse available pieces, commission custom work, or explore unique creations.
+        </p>
+        <a href="https://www.etsy.com/shop/costaandcraftsstudio?ref=seller-platform-mcnav&dd_referrer=https%3A%2F%2Fsarahrosecosta.com%2F" target="_blank" class="social-btn etsy" style="display: inline-block; font-size: 1.1rem; padding: 1rem 2.5rem;">
+            Shop on Etsy
+        </a>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="social-links">
             <a href="https://www.instagram.com/costaandcraftsstudio/" target="_blank" class="social-btn">Instagram</a>
-            <a href="#" target="_blank" class="social-btn etsy">Shop Etsy</a>
+            <a href="https://www.etsy.com/shop/costaandcraftsstudio?ref=seller-platform-mcnav&dd_referrer=https%3A%2F%2Fsarahrosecosta.com%2F" target="_blank" class="social-btn etsy">Shop Etsy</a>
         </div>
         <p>&copy; 2024 Sarah Rose Costa. All rights reserved. | Made with ☕ and probably too many puns.</p>
     </footer>
@@ -833,7 +855,7 @@
 
         // Update Etsy links (placeholder - replace with actual Etsy shop URL)
         const etsyLinks = document.querySelectorAll('.social-btn.etsy, .order-btn');
-        const etsyURL = 'https://www.etsy.com/shop/YourShopName'; // UPDATE THIS
+        const etsyURL = 'https://www.etsy.com/shop/costaandcraftsstudio?ref=seller-platform-mcnav&dd_referrer=https%3A%2F%2Fsarahrosecosta.com%2F';
         
         etsyLinks.forEach(link => {
             if (link.href === window.location.href + '#' || link.href === '#') {
