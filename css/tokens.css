@@ -1,0 +1,97 @@
+/* Design tokens: every colour, size, space, radius and shadow on the site.
+   Values come from docs/SPEC.md → Design tokens. Change them here only. */
+
+:root {
+  /* Colour */
+  --color-paper: #F5EEE3;
+  --color-card: #FFFBF5;
+  --color-ink: #2A2F45;
+  --color-muted: #5E6072;
+  --color-accent: #2F6B5E;
+  --color-accent-hover: #27584D;
+  --color-on-accent: #FFFFFF;
+  --color-border: #DDD2C2;
+  --color-border-soft: #E6DDD0;
+  --color-band-text: #C9C3D6;
+  --color-band-rule: #444A60;
+  --color-backdrop: rgba(42, 47, 69, 0.9);
+
+  /* Group tints: image placeholders and lightbox group labels */
+  --tint-people: #F2DCC8;
+  --tint-pets: #DCE4D2;
+  --tint-logos: #D9DFEB;
+  --tint-custom: #EDD8DE;
+  --tint-personal: #EFE4D4;
+
+  /* Fonts */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+
+  /* Text sizes. Each grows in a straight line from its phone size at a
+     390 px screen to its desktop size at 1280 px, then stops:
+       slope     = (desktop - phone) / (1280 - 390)
+       clamp()   = phone, (phone - slope × 390) + slope × 100vw, desktop
+     Pixel sizes (at the default 16 px text setting) are in the comments. */
+  --text-hero: clamp(2.5rem, 1.843rem + 2.697vw, 4rem);           /* 40 → 64 */
+  --text-section: clamp(2.25rem, 1.867rem + 1.573vw, 3.125rem);   /* 36 → 50 */
+  --text-band: clamp(2.625rem, 2.242rem + 1.573vw, 3.5rem);       /* 42 → 56 */
+  --text-panel: clamp(2rem, 1.726rem + 1.124vw, 2.625rem);        /* 32 → 42 */
+  --text-divider: clamp(1.625rem, 1.351rem + 1.124vw, 2.25rem);   /* 26 → 36 */
+  --text-price: clamp(1.5rem, 1.39rem + 0.449vw, 1.75rem);        /* 24 → 28 */
+  --text-wordmark: clamp(1.375rem, 1.238rem + 0.562vw, 1.6875rem); /* 22 → 27 */
+  --text-card-title: clamp(1.0625rem, 1.035rem + 0.112vw, 1.125rem); /* 17 → 18 */
+  --text-lead: clamp(1.0625rem, 1.008rem + 0.225vw, 1.1875rem);   /* 17 → 19 */
+  --text-body: clamp(1rem, 0.945rem + 0.225vw, 1.125rem);         /* 16 → 18 */
+  --text-body-sm: clamp(0.9375rem, 0.91rem + 0.112vw, 1rem);      /* 15 → 16 */
+  --text-ui: clamp(0.9375rem, 0.91rem + 0.112vw, 1rem);           /* 15 → 16 */
+  --text-chip: clamp(0.875rem, 0.848rem + 0.112vw, 0.9375rem);    /* 14 → 15 */
+  --text-small: 0.8125rem;                                        /* 13 */
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Layout (phone values; wider screens below) */
+  --gutter: 20px;
+  --section-pad: 64px;
+  --grid-gap: 20px 12px; /* rows, columns */
+  --content-max: 1280px;
+
+  /* Radii */
+  --radius-pill: 999px;
+  --radius-tile: 16px;
+  --radius-inset: 14px;
+  --radius-card: 22px;
+  --radius-panel: 28px;
+
+  /* Borders and shadows */
+  --border-w: 1.5px;
+  --shadow-lift: 0 16px 32px rgba(42, 47, 69, 0.18);
+  --shadow-float: 0 18px 40px rgba(42, 47, 69, 0.16);
+  --shadow-modal: 0 30px 80px rgba(20, 22, 34, 0.35);
+  --shadow-card: 0 2px 0 var(--color-border-soft);
+}
+
+/* Breakpoints are written as numbers: custom properties can't be used
+   inside a media query condition. 640 = tablet, 1024 = desktop. */
+
+@media (min-width: 640px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 72px;
+    --section-pad: 104px;
+    --grid-gap: 24px;
+    --radius-tile: 18px;
+  }
+}

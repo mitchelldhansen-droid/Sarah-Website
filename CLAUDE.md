@@ -33,4 +33,5 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 
 - The v1 site (single index.html, green/purple, Playfair + Lora) was removed on Sept 27, 2026. It's in git history at commit 4bfa10f.
 - Stack confirmed: plain HTML, CSS and vanilla JS.
-- Milestone 1 done (bare `index.html`). Next: milestone 2 in `docs/SPEC.md` → Build order.
+- Milestones 1–2 done (bare `index.html`; tokens and base styles). Next: milestone 3 in `docs/SPEC.md` → Build order.
+- Text-size tokens are in `rem` (Mitchell's choice, so they follow the visitor's browser text size); spacing and radii stay in `px`.

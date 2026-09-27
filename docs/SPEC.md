@@ -460,7 +460,7 @@ Mitchell can draft the alt text for Sarah to check.
 Build the static page first, then add one interactive piece at a time. Each milestone ends in something you can open and check, so it makes a natural commit and a good point to start a fresh Claude Code session.
 
 - [x] 1. Bare `index.html` with all eight sections, their anchors, and placeholder text; GitHub Pages turned on
-- [ ] 2. `tokens.css` and base styles (fonts, colours, type scale, gutters, section padding); check at phone and desktop widths
+- [x] 2. `tokens.css` and base styles (fonts, colours, type scale, gutters, section padding); check at phone and desktop widths
 - [ ] 3. Header: sticky, anchor links, scrolled border, phone menu
 - [ ] 4. Hero: text, the two buttons, art cluster with placeholder images
 - [ ] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles

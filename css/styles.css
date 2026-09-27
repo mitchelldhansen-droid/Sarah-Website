@@ -1,0 +1,69 @@
+/* Base styles. Values come only from tokens.css. Phone first: wider
+   layouts are added with min-width media queries. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+h1 {
+  font-size: var(--text-hero);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: var(--text-section);
+}
+
+/* Side padding is the gutter. Past 1280 px it grows, so the content stays
+   in a centred 1280 px column while backgrounds still run edge to edge. */
+header,
+main > *,
+footer {
+  padding-inline: max(var(--gutter), (100% - var(--content-max)) / 2 + var(--gutter));
+}
+
+section {
+  padding-block: var(--section-pad);
+}
+
+/* Off screen until it receives keyboard focus */
+.skip-link {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-size: var(--text-ui);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
