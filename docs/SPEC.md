@@ -159,7 +159,7 @@ Thirteen pieces make up the page. Eight are static HTML and CSS; the gallery, fi
 | Eyebrow label | — | "Illustrator & designer" | Card fill, 1.5 px soft border, pill, `--text-small` at 14 px, 700 |
 | Hero art cluster | Desktop, phone | 3 featured images chosen by Sarah | Rotated −5°, 3° and −2°; sizes 250×312, 280×350 and 180×180 px in a 440 px box (phone: 160×200, 180×225, 120×120 in 270 px). Decorative and not clickable, because the same pieces appear in the gallery |
 | Filter chip | Default, selected | Group label; starting price, calculated from offerings.json | "All" has no price. Real `<button>`s with `aria-pressed` |
-| Gallery tile | Desktop (hover caption), phone (caption below) | Square thumbnail; offering name(s); price label | The whole tile is one `<button>` that opens the lightbox. Logo tiles read "Logo Design / Suite" and "$250+" |
+| Gallery tile | Desktop (hover caption), phone (caption below) | Square thumbnail; offering name(s); price label | The whole tile is one `<button>` that opens the lightbox. Logo tiles read "Logo Design / Logo Suite" (the offering names joined with " / ") and "$250+" (the lowest price). The hover caption only appears on screens 1024 px or wider that can hover; touch screens keep the caption below at every width |
 | Lightbox | Commission, logo, personal | The image, its list (the currently filtered tiles, or the carousel), its position | Commission: one teal button. Logo: two buttons, Logo Design and Logo Suite, each with price and "Includes N edits" note. Personal: title and year, no button |
 | Wavy divider | Desktop, phone | "See more of my work" | Inline SVG path, 2 px teal stroke, round caps. Heading in `--text-divider` |
 | Carousel | — | Cards from personal.json | Card: card fill, 12 px padding, `--radius-card`, 4:5 image, title and year below. Controls: dots, pause, previous, next |
@@ -465,7 +465,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 2. `tokens.css` and base styles (fonts, colours, type scale, gutters, section padding); check at phone and desktop widths
 - [x] 3. Header: sticky, anchor links, scrolled border, phone menu
 - [x] 4. Hero: text, the two buttons, art cluster with placeholder images
-- [ ] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles
+- [x] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles
 - [ ] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement
 - [ ] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
 - [ ] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion

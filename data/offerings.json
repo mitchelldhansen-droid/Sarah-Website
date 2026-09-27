@@ -1,0 +1,17 @@
+{
+  "groups": [
+    { "id": "people", "label": "People" },
+    { "id": "pets", "label": "Pets" },
+    { "id": "logos", "label": "Logos" },
+    { "id": "custom", "label": "Custom" }
+  ],
+  "offerings": [
+    { "id": "solo-portrait", "name": "Solo Portrait", "group": "people", "price": 150, "note": "", "description": "", "etsyUrl": "" },
+    { "id": "duo-portrait", "name": "Duo Portrait", "group": "people", "price": 225, "note": "", "description": "", "etsyUrl": "" },
+    { "id": "animal-face", "name": "Animal Portrait (Face)", "group": "pets", "price": 125, "note": "", "description": "", "etsyUrl": "" },
+    { "id": "animal-full-body", "name": "Animal Portrait (Full Body)", "group": "pets", "price": 200, "note": "", "description": "", "etsyUrl": "" },
+    { "id": "logo-design", "name": "Logo Design", "group": "logos", "price": 250, "note": "Includes 1 edit", "description": "", "etsyUrl": "" },
+    { "id": "logo-suite", "name": "Logo Suite", "group": "logos", "price": 500, "note": "Includes 2 edits", "description": "", "etsyUrl": "" },
+    { "id": "custom-commission", "name": "Custom Commission", "group": "custom", "price": 170, "note": "", "description": "", "etsyUrl": "" }
+  ]
+}

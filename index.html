@@ -55,11 +55,39 @@
       </div>
     </section>
 
-    <section id="gallery">
-      <h2>Commission gallery</h2>
-      <p>Click any piece to see it larger, then commission your own in that style.</p>
+    <section id="gallery" class="gallery">
+      <div class="section-head">
+        <h2>Commission gallery</h2>
+        <p>Choose any piece to see it larger, then commission your own in that style.</p>
+      </div>
       <!-- Filter chips: milestone 6 -->
-      <!-- Tiles, drawn from data/gallery.json: milestone 5 -->
+
+      <!-- Tiles are drawn here by js/gallery.js. role="list" keeps the list
+           announced in Safari, which drops it when list-style is none. -->
+      <ul class="gallery-grid" role="list"></ul>
+
+      <p class="gallery-message" id="gallery-error" hidden>The gallery didn't load. Please refresh, or <a href="#" target="_blank" rel="noopener" aria-label="visit the Etsy shop (opens in a new tab)">visit the Etsy shop</a>.</p>
+      <noscript>
+        <p class="gallery-message">The gallery needs JavaScript to show. You can browse my work on <a href="#" target="_blank" rel="noopener" aria-label="my Etsy shop (opens in a new tab)">my Etsy shop</a>.</p>
+      </noscript>
+
+      <template id="tile-template">
+        <li>
+          <button class="tile" type="button">
+            <span class="tile-art">
+              <img alt="" width="600" height="600" loading="lazy">
+              <span class="tile-placeholder"></span>
+            </span>
+            <span class="tile-caption">
+              <span class="tile-text">
+                <span class="tile-name"></span>
+                <span class="tile-price"></span>
+              </span>
+              <span class="tile-view">View</span>
+            </span>
+          </button>
+        </li>
+      </template>
     </section>
 
     <div>

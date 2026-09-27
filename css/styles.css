@@ -221,6 +221,215 @@ section {
   }
 }
 
+/* Centred heading and subline at the top of a section */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.section-head > * {
+  margin: 0;
+}
+
+.section-head p {
+  color: var(--color-muted);
+  font-size: var(--text-body-sm);
+  line-height: 1.6;
+}
+
+/* Gallery. 2 columns, then 3 from 640 px, then 4 from 1024 px. */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-message {
+  margin: 0;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* Tile: square art with the caption underneath (phones and tablets) */
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-tile);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* --tile-tint is set per tile by gallery.js from the offering's group */
+.tile-art {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-tile);
+  background: var(--tile-tint);
+}
+
+.tile-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Shown only when the image file is missing */
+.tile-placeholder {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  color: var(--color-muted);
+  font-size: var(--text-chip);
+  font-weight: 600;
+  text-align: center;
+}
+
+.tile.is-missing img {
+  display: none;
+}
+
+.tile.is-missing .tile-placeholder {
+  display: flex;
+}
+
+.tile-caption {
+  display: flex;
+  padding-inline: var(--space-1);
+}
+
+.tile-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Long names wrap to two lines at most, then end in "…" */
+.tile-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: var(--text-chip);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.tile-price {
+  color: var(--color-accent);
+  font-size: var(--text-chip);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.tile-view {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    gap: var(--space-6);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Desktop with a mouse: the caption becomes a bar that appears on hover or
+   keyboard focus. Touch screens keep the caption underneath, even when wide,
+   because they can't hover. */
+@media (min-width: 1024px) and (hover: hover) {
+  .tile {
+    position: relative;
+    transition: box-shadow 200ms ease-out, translate 200ms ease-out;
+  }
+
+  .tile:hover,
+  .tile:focus-visible {
+    box-shadow: var(--shadow-lift);
+  }
+
+  .tile-caption {
+    position: absolute;
+    right: var(--space-3);
+    bottom: var(--space-3);
+    left: var(--space-3);
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-inset);
+    background: var(--color-card);
+    opacity: 0;
+    transition: opacity 200ms ease-out, translate 200ms ease-out;
+  }
+
+  .tile:hover .tile-caption,
+  .tile:focus-visible .tile-caption {
+    opacity: 1;
+  }
+
+  .tile-name {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .tile-view {
+    display: block;
+    flex-shrink: 0;
+    font-size: var(--text-small);
+    font-weight: 700;
+  }
+}
+
+/* The lift and slide are movement, so they're skipped for reduced motion */
+@media (min-width: 1024px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .tile:hover,
+  .tile:focus-visible {
+    translate: 0 -6px;
+  }
+
+  .tile-caption {
+    translate: 0 8px;
+  }
+
+  .tile:hover .tile-caption,
+  .tile:focus-visible .tile-caption {
+    translate: 0 0;
+  }
+}
+
 /* Header. Compact (wordmark, Shop, menu button) until 820 px, then full. */
 .site-header {
   position: sticky;

@@ -1,0 +1,14 @@
+[
+  { "file": "solo-portrait_01", "offerings": ["solo-portrait"], "alt": "" },
+  { "file": "animal-face_01", "offerings": ["animal-face"], "alt": "" },
+  { "file": "duo-portrait_01", "offerings": ["duo-portrait"], "alt": "" },
+  { "file": "logo_01", "offerings": ["logo-design", "logo-suite"], "alt": "" },
+  { "file": "animal-full-body_01", "offerings": ["animal-full-body"], "alt": "" },
+  { "file": "custom-commission_01", "offerings": ["custom-commission"], "alt": "" },
+  { "file": "solo-portrait_02", "offerings": ["solo-portrait"], "alt": "" },
+  { "file": "duo-portrait_02", "offerings": ["duo-portrait"], "alt": "" },
+  { "file": "animal-face_02", "offerings": ["animal-face"], "alt": "" },
+  { "file": "logo_02", "offerings": ["logo-design", "logo-suite"], "alt": "" },
+  { "file": "custom-commission_02", "offerings": ["custom-commission"], "alt": "" },
+  { "file": "animal-full-body_02", "offerings": ["animal-full-body"], "alt": "" }
+]

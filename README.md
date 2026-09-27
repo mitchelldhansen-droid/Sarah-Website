@@ -16,7 +16,21 @@ Then open http://localhost:8000. (Opening `index.html` directly won't work, beca
 
 ## Add a new piece
 
-_To be written once the gallery is built (milestone 5)._ The short version: export the images at the sizes in `docs/SPEC.md` → Content and data, drop them in `images/`, add one entry to `data/gallery.json`, and push.
+1. Export the piece twice, as WebP at about 80% quality (sizes are in `docs/SPEC.md` → Content and data):
+   - a square thumbnail, cropped by hand, 600 × 600 → `images/thumbs/<name>.webp`
+   - the whole piece, uncropped, long edge 800 and 1400 → `images/full/<name>-800.webp` and `images/full/<name>-1400.webp`
+2. Add one entry to `data/gallery.json`, where you want it to appear in the grid:
+
+   ```json
+   { "file": "solo-portrait_03", "offerings": ["solo-portrait"], "alt": "Watercolour portrait of a woman in a yellow hat" }
+   ```
+
+   - `file` is the image name without the folder or `.webp`.
+   - `offerings` lists the offering ids from `data/offerings.json`. Logo pieces list both: `["logo-design", "logo-suite"]`.
+   - `alt` describes what's in the picture and the style, in about 125 characters.
+3. Check it locally (see above), then commit and push.
+
+If a tile shows its name on a coloured square instead of the art, the image file is missing or misnamed; the browser console says which file it looked for.
 
 ## Deploy
 
