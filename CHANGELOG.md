@@ -7,6 +7,7 @@ All notable changes to Sarah Rose Costa's portfolio site.
 Rebuild from the Warm Sketchbook design.
 
 ### Added
+- Milestone 1: bare `index.html` with all eight sections and their anchors (`#gallery`, `#more-work`, `#about`, `#faq`, `#contact`), landmarks, one `<h1>`, a skip link, and placeholder text. Sarah's missing content is marked `[Placeholder: …]`; parts later milestones build are marked with HTML comments. No CSS or JS yet. GitHub Pages was already on (from `main`).
 - `docs/SPEC.md` build spec, `docs/BRIEF.md` decisions, `docs/design/` mockups
 - `CLAUDE.md` project instructions for Claude Code
 

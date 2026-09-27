@@ -13,7 +13,7 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 - Plain HTML, CSS and vanilla JavaScript (ES modules). No framework, no build step, no npm dependencies, unless Mitchell decides otherwise.
 - Run locally with `py -m http.server` (or `python -m http.server`) from the repo root, then open http://localhost:8000. Opening index.html directly won't load the JSON.
 - Colours, type, spacing, radii and shadows come only from the tokens in `css/tokens.css`. No raw hex values elsewhere.
-- Names, prices and Etsy links live only in `data/offerings.json`. Never hard-code them in HTML or JS.
+- Offering names, prices and Etsy listing links live only in `data/offerings.json`. Never hard-code them in HTML or JS. The main Etsy shop link, email and Instagram are the exception: they're hard-coded in `index.html` (see SPEC → Content and data).
 - Never crop artwork with `object-fit: cover`; thumbnails are cropped by hand to exact sizes.
 - Use real elements: `<button>`, `<a href>`, `<details>`, `<dialog>`. Meet the Accessibility section of the spec.
 - Respect `prefers-reduced-motion` for every animation.
@@ -32,4 +32,5 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 ## Current status
 
 - The v1 site (single index.html, green/purple, Playfair + Lora) was removed on Sept 27, 2026. It's in git history at commit 4bfa10f.
-- No milestones built yet. Next: milestone 1 in `docs/SPEC.md` → Build order.
+- Stack confirmed: plain HTML, CSS and vanilla JS.
+- Milestone 1 done (bare `index.html`). Next: milestone 2 in `docs/SPEC.md` → Build order.

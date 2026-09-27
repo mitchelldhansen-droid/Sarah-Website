@@ -118,13 +118,17 @@ One page, eight sections, top to bottom. Write the CSS phone-first: phone styles
 | # | Section | Anchor | Desktop (≥ 1024 px) | Phone (< 640 px) |
 | --- | --- | --- | --- | --- |
 | 1 | Header, sticky | — | 84 px tall. Wordmark left; Gallery, About, FAQ, Contact links and a "Shop on Etsy" pill right | 64 px tall. Wordmark, "Shop" pill, menu button |
-| 2 | Hero | `#top` | Two columns: text left, three-piece art cluster right | One column: text, then the cluster (270 px tall) underneath |
+| 2 | Hero | — | Two columns: text left, three-piece art cluster right | One column: text, then the cluster (270 px tall) underneath |
 | 3 | Commission gallery | `#gallery` | Centred heading; chips wrap and centre; 4-column grid | Chips scroll sideways in one row; 2-column grid; caption under each tile |
 | 4 | Divider | — | 180 px wavy line either side of the text | 54 px wavy lines |
 | 5 | Personal work carousel | `#more-work` | 320 px cards, about 3½ visible, bleeding off the right edge | 270 px cards, about 1¼ visible |
 | 6 | About | `#about` | One card: 320 px round photo left, text right | Card stacked and centred; 200 px photo |
 | 7 | FAQ | `#faq` | Centred column, 860 px wide | Full width |
 | 8 | Contact band and footer | `#contact` | Navy band, centred text, three pills in a row; footer inside the band | Pills stacked full width |
+
+The footer only *looks* like it's inside the band. In the HTML, `<section id="contact">` is the last thing in `<main>` and `<footer>` follows it as a sibling, so it stays the page's footer landmark. Both get the navy background.
+
+The hero has no id on purpose. The wordmark and "Back to top" link to `#top`, and when no element has `id="top"`, browsers scroll to the very top of the page. Giving the hero that id would stop the scroll at the hero instead, below the header.
 
 **Breakpoints**
 
@@ -445,7 +449,7 @@ Mitchell can draft the alt text for Sarah to check.
 
 **Decisions to confirm**
 
-- [ ] Stack: plain HTML, CSS and JavaScript (recommended), or React
+- [x] Stack: plain HTML, CSS and JavaScript (confirmed Sept 27, 2026)
 - [ ] Name on the site: "Sarah Rose Costa"
 - [ ] Etsy links open in a new tab
 - [ ] Carousel autoplays every 6 seconds by default
@@ -455,7 +459,7 @@ Mitchell can draft the alt text for Sarah to check.
 
 Build the static page first, then add one interactive piece at a time. Each milestone ends in something you can open and check, so it makes a natural commit and a good point to start a fresh Claude Code session.
 
-- [ ] 1. Bare `index.html` with all eight sections, their anchors, and placeholder text; GitHub Pages turned on
+- [x] 1. Bare `index.html` with all eight sections, their anchors, and placeholder text; GitHub Pages turned on
 - [ ] 2. `tokens.css` and base styles (fonts, colours, type scale, gutters, section padding); check at phone and desktop widths
 - [ ] 3. Header: sticky, anchor links, scrolled border, phone menu
 - [ ] 4. Hero: text, the two buttons, art cluster with placeholder images
