@@ -88,6 +88,7 @@ Fonts: `--font-display` is Fraunces (500, 600, italic 500); `--font-body` is Nun
 | `--text-ui` | 16 px | 15 px | Nunito 700 | 1.2 | Buttons, nav links (600), FAQ questions |
 | `--text-chip` | 15 px | 14 px | Nunito 700 | 1.2 | Filter chips, tile captions |
 | `--text-small` | 13 px | 13 px | Nunito 600–700 | 1.4 | Notes, counters, uppercase labels (0.12em tracking) |
+| `--text-menu` | — | 20 px | Nunito 600 | 1.2 | Phone menu links (the phone menu only appears below 820 px) |
 
 The mockup's About heading is 48 px. It moves to `--text-section` (50 px) so all section headings match.
 
@@ -96,6 +97,7 @@ The mockup's About heading is 48 px. It moves to `--text-section` (50 px) so all
 | Token | Value | Used for |
 | --- | --- | --- |
 | `--space-1` … `--space-8` | 4, 8, 12, 16, 24, 32, 48, 64 px | All gaps and padding inside components |
+| `--header-h` | 84 px from 820 px wide, 64 px below | Header height; sections' `scroll-margin-top` is this plus 16 px |
 | `--gutter` | 72 px desktop, 20 px phone | Left and right page padding |
 | `--section-pad` | 104 px desktop, 64 px phone | Top and bottom padding per section |
 | `--grid-gap` | 24 px desktop; 12 px columns and 20 px rows on phone | Gallery grid |
@@ -429,7 +431,7 @@ Nothing here blocks starting the build: placeholders cover every missing piece o
 - [ ] Phone lightbox: a full-screen sheet with the art on top, details below, and the Commission button pinned to the bottom
 - [ ] Logo lightbox in Warm Sketchbook style: two package cards (Logo Design, Logo Suite), each with price, note and button
 - [ ] Personal-piece lightbox: title and year, no button
-- [ ] Phone menu panel
+- [x] Phone menu panel (built as suggested under Components: card panel under the header, 56 px rows, 20 px text)
 - [ ] Tablet layout (described in words above; check it during the build)
 - [ ] Hover states for buttons and chips (described above, not drawn)
 
@@ -451,7 +453,7 @@ Mitchell can draft the alt text for Sarah to check.
 
 - [x] Stack: plain HTML, CSS and JavaScript (confirmed Sept 27, 2026)
 - [ ] Name on the site: "Sarah Rose Costa"
-- [ ] Etsy links open in a new tab
+- [x] Etsy links open in a new tab (Sept 27, 2026)
 - [ ] Carousel autoplays every 6 seconds by default
 - [ ] Hero subline still reads "Browse the gallery, find a style you love…" now that the buttons are Work with me and Visit the Etsy shop
 
@@ -461,7 +463,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 
 - [x] 1. Bare `index.html` with all eight sections, their anchors, and placeholder text; GitHub Pages turned on
 - [x] 2. `tokens.css` and base styles (fonts, colours, type scale, gutters, section padding); check at phone and desktop widths
-- [ ] 3. Header: sticky, anchor links, scrolled border, phone menu
+- [x] 3. Header: sticky, anchor links, scrolled border, phone menu
 - [ ] 4. Hero: text, the two buttons, art cluster with placeholder images
 - [ ] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles
 - [ ] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement

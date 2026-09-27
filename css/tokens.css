@@ -46,6 +46,7 @@
   --text-ui: clamp(0.9375rem, 0.91rem + 0.112vw, 1rem);           /* 15 → 16 */
   --text-chip: clamp(0.875rem, 0.848rem + 0.112vw, 0.9375rem);    /* 14 → 15 */
   --text-small: 0.8125rem;                                        /* 13 */
+  --text-menu: 1.25rem;                                           /* 20, phone menu links */
 
   /* Spacing */
   --space-1: 4px;
@@ -58,6 +59,7 @@
   --space-8: 64px;
 
   /* Layout (phone values; wider screens below) */
+  --header-h: 64px;
   --gutter: 20px;
   --section-pad: 64px;
   --grid-gap: 20px 12px; /* rows, columns */
@@ -79,11 +81,19 @@
 }
 
 /* Breakpoints are written as numbers: custom properties can't be used
-   inside a media query condition. 640 = tablet, 1024 = desktop. */
+   inside a media query condition. 640 = tablet, 1024 = desktop, and
+   820 = the full header (nav links showing), which has its own breakpoint
+   because the links fit before the rest of the desktop layout does. */
 
 @media (min-width: 640px) {
   :root {
     --gutter: 40px;
+  }
+}
+
+@media (min-width: 820px) {
+  :root {
+    --header-h: 84px;
   }
 }
 

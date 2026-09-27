@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+/* Anchor links glide, unless the device asks for less motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Keyboard focus ring for everything; mouse clicks don't show it */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 body {
   margin: 0;
   background: var(--color-paper);
@@ -45,8 +58,167 @@ footer {
   padding-inline: max(var(--gutter), (100% - var(--content-max)) / 2 + var(--gutter));
 }
 
+/* scroll-margin-top stops anchor jumps below the sticky header */
 section {
   padding-block: var(--section-pad);
+  scroll-margin-top: calc(var(--header-h) + var(--space-4));
+}
+
+/* Buttons (links styled as pills). Each use sets its own height. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-ui);
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn:active {
+    transform: translateY(1px);
+  }
+}
+
+/* Header. Compact (wordmark, Shop, menu button) until 820 px, then full. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--header-h);
+  background: var(--color-paper);
+  border-bottom: 1px solid transparent;
+  transition: border-color 150ms ease;
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border-soft);
+}
+
+.wordmark {
+  margin-right: auto;
+  font-family: var(--font-display);
+  font-size: var(--text-wordmark);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.menu-button {
+  order: 1; /* sits after Shop on screen, but before the nav in tab order */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: calc(var(--space-3) * -1); /* lines the icon up with the gutter */
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Three lines while closed, an × while open */
+.menu-button[aria-expanded="true"] .icon-open,
+.menu-button[aria-expanded="false"] .icon-close {
+  display: none;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  font-size: var(--text-menu);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+}
+
+/* Phone menu: a panel under the header, shown while the button is expanded */
+.site-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: var(--space-2) var(--gutter);
+  background: var(--color-card);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.site-header:has(.menu-button[aria-expanded="true"]) .site-nav {
+  display: block;
+}
+
+.shop-extra {
+  display: none;
+}
+
+@media (min-width: 820px) {
+  .site-header {
+    gap: var(--space-6);
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .site-nav,
+  .site-header:has(.menu-button[aria-expanded="true"]) .site-nav {
+    display: block;
+    position: static;
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+
+  .site-nav ul {
+    display: flex;
+    gap: var(--space-6);
+  }
+
+  .site-nav a {
+    min-height: 44px;
+    font-size: var(--text-ui);
+  }
+
+  .shop-link {
+    min-height: 46px;
+    padding-inline: var(--space-5);
+  }
+
+  .shop-extra {
+    display: inline;
+  }
 }
 
 /* Off screen until it receives keyboard focus */
