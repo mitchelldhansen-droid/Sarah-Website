@@ -77,7 +77,7 @@ section {
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
-  transition: background-color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease;
 }
 
 .btn-primary {
@@ -89,9 +89,135 @@ section {
   background: var(--color-accent-hover);
 }
 
+.btn-outline {
+  border: var(--border-w) solid var(--color-ink);
+  color: var(--color-ink);
+}
+
+.btn-outline:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .btn:active {
     transform: translateY(1px);
+  }
+}
+
+/* Hero. One column (text, then art) until 1024 px, then two. */
+.hero {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-6) var(--space-7);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.hero-text > * {
+  margin: 0;
+}
+
+.eyebrow {
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-w) solid var(--color-border-soft);
+  border-radius: var(--radius-pill);
+  background: var(--color-card);
+  font-size: var(--text-small);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.hero-lead {
+  max-width: 480px;
+  color: var(--color-muted);
+  font-size: var(--text-lead);
+  line-height: 1.6;
+}
+
+/* Stacked full width on phones, side by side from 640 px */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-self: stretch;
+  margin-top: var(--space-1);
+}
+
+.hero-buttons .btn {
+  min-height: 54px;
+  padding-inline: var(--space-6);
+}
+
+/* The art cluster keeps one shape and scales as a whole. Positions and
+   sizes are percentages of the mockup's 544 × 440 px box, so the three
+   pieces overlap the same way at every width. */
+.hero-art {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 544px;
+  aspect-ratio: 544 / 440;
+}
+
+/* The tint shows until the image loads (or while the file doesn't exist yet) */
+.hero-art img {
+  position: absolute;
+  display: block;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-card);
+}
+
+.hero-art img:nth-child(1) {
+  left: 11.03%;
+  top: 2.27%;
+  width: 45.96%;
+  rotate: -5deg;
+  background: var(--tint-pets);
+}
+
+.hero-art img:nth-child(2) {
+  left: 43.38%;
+  top: 12.73%;
+  width: 51.47%;
+  rotate: 3deg;
+  background: var(--tint-people);
+  box-shadow: var(--shadow-float);
+}
+
+.hero-art img:nth-child(3) {
+  left: 3.68%;
+  top: 56.82%;
+  width: 33.09%;
+  aspect-ratio: 1;
+  rotate: -2deg;
+  background: var(--tint-logos);
+  box-shadow: var(--shadow-float);
+}
+
+@media (min-width: 640px) {
+  .hero-buttons {
+    flex-direction: row;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: var(--space-7);
+    padding-block: var(--space-8);
+  }
+
+  .hero-text {
+    gap: var(--space-5);
   }
 }
 

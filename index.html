@@ -37,13 +37,22 @@
 
   <main>
     <!-- No id="top" here: #top links rely on the browser's built-in "top of page" -->
-    <section>
-      <p>Illustrator &amp; designer</p>
-      <h1>Portraits, pet portraits &amp; logos, made to order</h1>
-      <p>Browse the gallery, find a style you love, and commission your own through my Etsy shop.</p>
-      <a href="#about">Work with me</a>
-      <a href="#">Visit the Etsy shop</a>
-      <!-- Art cluster, three featured pieces: milestone 4 -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Illustrator &amp; designer</p>
+        <h1>Portraits, pet portraits &amp; logos, made to order</h1>
+        <p class="hero-lead">Browse the gallery, find a style you love, and commission your own through my Etsy shop.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#about">Work with me</a>
+          <a class="btn btn-outline" href="#" target="_blank" rel="noopener" aria-label="Visit the Etsy shop (opens in a new tab)">Visit the Etsy shop</a>
+        </div>
+      </div>
+      <!-- Decorative: the same pieces are in the gallery with full alt text -->
+      <div class="hero-art" aria-hidden="true">
+        <img src="images/hero/hero_01.webp" alt="" width="600" height="750">
+        <img src="images/hero/hero_02.webp" alt="" width="600" height="750">
+        <img src="images/hero/hero_03.webp" alt="" width="600" height="600">
+      </div>
     </section>
 
     <section id="gallery">

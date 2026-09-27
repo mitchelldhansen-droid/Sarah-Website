@@ -464,7 +464,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 1. Bare `index.html` with all eight sections, their anchors, and placeholder text; GitHub Pages turned on
 - [x] 2. `tokens.css` and base styles (fonts, colours, type scale, gutters, section padding); check at phone and desktop widths
 - [x] 3. Header: sticky, anchor links, scrolled border, phone menu
-- [ ] 4. Hero: text, the two buttons, art cluster with placeholder images
+- [x] 4. Hero: text, the two buttons, art cluster with placeholder images
 - [ ] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles
 - [ ] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement
 - [ ] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
