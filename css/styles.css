@@ -350,10 +350,17 @@ section {
   background: var(--tile-tint);
 }
 
+/* Invisible until loaded (gallery.js adds is-loaded), then it fades in over
+   the tint; the fade itself is in the motion block at the end of the file */
 .tile-art img {
   display: block;
   width: 100%;
   height: auto;
+  opacity: 0;
+}
+
+.tile.is-loaded .tile-art img {
+  opacity: 1;
 }
 
 /* Shown only when the image file is missing */
@@ -605,6 +612,11 @@ section {
   display: block;
   width: 100%;
   height: auto;
+  opacity: 0;
+}
+
+.card.is-loaded .card-art img {
+  opacity: 1;
 }
 
 .card.is-missing img {
@@ -1238,6 +1250,11 @@ html:has(.lightbox[open]) {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  opacity: 0;
+}
+
+.lightbox-art.is-loaded img {
+  opacity: 1;
 }
 
 .lightbox-art.is-missing img {
@@ -1440,5 +1457,74 @@ html:has(.lightbox[open]) {
   .lightbox-nav {
     margin-top: var(--space-4);
     padding-bottom: 0;
+  }
+}
+
+/* Lightbox open and close. A <dialog> jumps between display: none and
+   shown, so it needs two newer tools to animate:
+   - @starting-style gives the values to animate *from* as it opens
+   - allow-discrete (with overlay) keeps it on screen while it closes;
+     that part is Chromium-only for now, so other browsers close instantly
+   Opening uses the [open] rules' timing; closing uses the plain ones.
+   These base values are the reduced-motion version: a 100 ms fade. */
+.lightbox,
+.lightbox::backdrop {
+  opacity: 0;
+  transition-property: opacity, scale, display, overlay;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+  transition-behavior: allow-discrete;
+}
+
+.lightbox[open],
+.lightbox[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  .lightbox[open],
+  .lightbox[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+/* Motion allowed: the panel also grows from 97%. It rests at scale: none,
+   not 1, because any scale would make the dialog the frame for its fixed
+   close button, and on phones the button would scroll away. */
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox,
+  .lightbox::backdrop {
+    transition-duration: 160ms;
+  }
+
+  .lightbox {
+    scale: 0.97;
+  }
+
+  .lightbox[open] {
+    scale: none;
+  }
+
+  .lightbox[open],
+  .lightbox[open]::backdrop {
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  @starting-style {
+    .lightbox[open] {
+      scale: 0.97;
+    }
+  }
+
+  /* Images fade in over their tint once loaded; with reduced motion they
+     simply appear */
+  .tile-art img,
+  .card-art img {
+    transition: opacity 200ms ease-out;
+  }
+
+  .lightbox-art img {
+    transition: opacity 180ms ease;
   }
 }

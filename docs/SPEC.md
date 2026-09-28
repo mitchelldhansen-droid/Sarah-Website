@@ -211,8 +211,9 @@ Sarah asked for smooth animations. Keep them short (150–250 ms) and subtle: at
 | Tile caption bar | Hover or focus | Slide up 8 px and fade in | 200 ms | ease-out |
 | Gallery tiles | Filter change | Newly shown tiles fade in. The grid itself jumps to its new layout without animating | 200 ms | ease-out |
 | Lightbox | Open | Backdrop fades in; panel fades in and scales from 0.97 to 1 | 220 ms | cubic-bezier(0.2, 0.8, 0.2, 1) |
-| Lightbox | Close | Reverse of open | 160 ms | ease-in |
-| Lightbox image | Previous / Next | Crossfade | 180 ms | ease |
+| Lightbox | Close | Reverse of open (Chromium only for now; other browsers close instantly) | 160 ms | ease-in |
+| Lightbox image | Previous / Next, and first load | The new image fades in over the tint (a simpler stand-in for a true crossfade) | 180 ms | ease |
+| Tile and carousel images | Load | Fade in over the tint | 200 ms | ease-out |
 | Carousel | Autoplay tick, arrows | Smooth scroll by one card | about 500 ms (browser smooth scroll) | browser default |
 | Page | Nav link | Smooth scroll (`scroll-behavior: smooth`) | browser default | browser default |
 | Header border | Scroll past 8 px | Fade in | 150 ms | ease |
@@ -470,7 +471,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
 - [x] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion
 - [x] 9. About card, FAQ with `<details>`, contact band, footer
-- [ ] 10. Motion pass, including reduced motion
+- [x] 10. Motion pass, including reduced motion
 - [ ] 11. Responsive pass at 320, 390, 768, 1024, 1280 and 1600 px
 - [ ] 12. Accessibility pass: keyboard only, a screen reader, Lighthouse
 - [ ] 13. Real content and images from Sarah; alt text; check every Etsy link

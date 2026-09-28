@@ -122,6 +122,7 @@ function makeCard(template, piece, index, count) {
   slide.querySelector('.card-title').textContent = piece.title;
   slide.querySelector('.card-year').textContent = piece.year;
 
+  img.addEventListener('load', () => card.classList.add('is-loaded'));
   img.addEventListener('error', () => {
     card.classList.add('is-missing');
     console.warn(`Missing image: ${img.src}`);

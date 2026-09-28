@@ -110,7 +110,9 @@ function makeTile(template, piece, groupId) {
   item.querySelector('.tile-price').textContent = price;
   item.querySelector('.tile-placeholder').textContent = piece.title;
 
-  // Listen before setting src, so a fast failure can't be missed
+  // Listen before setting src, so a fast load or failure can't be missed.
+  // is-loaded fades the image in over its tint.
+  img.addEventListener('load', () => tile.classList.add('is-loaded'));
   img.addEventListener('error', () => {
     tile.classList.add('is-missing');
     console.warn(`Missing image: ${img.src}`);
