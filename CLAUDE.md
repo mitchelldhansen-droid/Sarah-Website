@@ -35,7 +35,7 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 - Stack confirmed: plain HTML, CSS and vanilla JS.
 - Milestones 1–12 done: every section is built, styled, animated, checked from 320 to 1600 px, and passes an accessibility audit (Lighthouse Accessibility 100, NVDA run clean).
 - Lighthouse Best Practices is 92 only because placeholder images 404 in the console; expect it to rise once real images are in.
-- Next: milestone 13 (Sarah's real content). It's blocked until her content arrives; see `docs/BRIEF.md` → Content still needed.
+- Milestone 13 in progress: draft copy (offering descriptions, About, FAQ answers, personal titles) is in the site as a starting point. It is NOT final: `docs/BRIEF.md` → "Drafts in the site" lists every draft, and every [bracketed] gap is a fact only Sarah can supply. Nothing launches until that checklist and "Content still needed" are cleared.
 - The lightbox is opened with `openLightbox(pieces, index, openerElement)`; personal pieces are `{ file, alt, title, label: 'Personal', tint: 'var(--tint-personal)', year }` with no `offerings`.
 - Filtering sets `hidden` on gallery `<li>`s; the lightbox's list is the tiles that aren't hidden.
 - Images point at their final paths from the spec before the files exist; the group tint shows until Sarah's images are dropped in.

@@ -50,4 +50,26 @@ One site that works as both Sarah's portfolio and her shop front. Etsy handles a
 - [ ] Contact email and Instagram handle
 - [ ] Domain name
 
+## Drafts in the site: Sarah to rewrite or approve
+
+Written by Mitchell and Claude on Sept 27, 2026 as a starting point, not in Sarah's voice. Anything in [square brackets] is a fact only Sarah knows; none of these can launch until she has rewritten or approved them.
+
+- [ ] Offering descriptions, all 7 (`data/offerings.json` → `description`). Shown in the lightbox; the two logo descriptions aren't shown anywhere yet, because the logo lightbox shows package cards instead. Logo Suite: what are the "[matching variations]"?
+- [ ] About text (`index.html`, About section). Fill in: [medium], [when].
+- [ ] FAQ answers, all 7 (`index.html`, FAQ section). Fill in or confirm:
+  - Ordering: does she share a sketch before finishing? How is the piece delivered?
+  - Timing: portrait and logo turnaround, in weeks
+  - Revisions: what's included for portraits, and whether bigger changes cost extra
+  - Physical or digital: what portraits come as; logo file formats
+  - Shipping: whether she sells physical pieces, and where she ships
+- [ ] Personal piece titles, all 5 (`data/personal.json` → `title`). Made up to fill the cards; they should be her real titles. Years are still "[Year]".
+- [ ] The two FAQ questions written from the brief's topic list: "Do you ship?" and "Can I request something that isn't listed?"
+
+**Alt text patterns** (for Mitchell to draft once the images arrive, and Sarah to check). Say what's in the picture and the style, in about 125 characters:
+
+- Portrait: "[Medium] portrait of [who], [one detail that stands out]". Example: "Watercolour portrait of a smiling woman in a yellow raincoat, soft washes of blue behind her"
+- Pet: "[Medium] of [animal and breed] [pose or expression]". Example: "Pencil drawing of a beagle with one ear flipped up, looking straight at the viewer"
+- Logo: "Logo for [business]: [what it shows], in [colours]". Example: "Logo for a bakery: a rolling pin crossed with a wheat stalk, in navy and gold"
+- Personal piece: "[Medium] of [subject], [mood or setting]"
+
 **FAQ questions to answer:** how ordering a commission works; what buyers need to send; how long a commission takes; how many revisions are included; physical original, print or digital file; shipping; requests outside the listed offerings.

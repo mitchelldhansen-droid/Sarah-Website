@@ -6,12 +6,12 @@
     { "id": "custom", "label": "Custom" }
   ],
   "offerings": [
-    { "id": "solo-portrait", "name": "Solo Portrait", "group": "people", "price": 150, "note": "", "description": "", "etsyUrl": "" },
-    { "id": "duo-portrait", "name": "Duo Portrait", "group": "people", "price": 225, "note": "", "description": "", "etsyUrl": "" },
-    { "id": "animal-face", "name": "Animal Portrait (Face)", "group": "pets", "price": 125, "note": "", "description": "", "etsyUrl": "" },
-    { "id": "animal-full-body", "name": "Animal Portrait (Full Body)", "group": "pets", "price": 200, "note": "", "description": "", "etsyUrl": "" },
-    { "id": "logo-design", "name": "Logo Design", "group": "logos", "price": 250, "note": "Includes 1 edit", "description": "", "etsyUrl": "" },
-    { "id": "logo-suite", "name": "Logo Suite", "group": "logos", "price": 500, "note": "Includes 2 edits", "description": "", "etsyUrl": "" },
-    { "id": "custom-commission", "name": "Custom Commission", "group": "custom", "price": 170, "note": "", "description": "", "etsyUrl": "" }
+    { "id": "solo-portrait", "name": "Solo Portrait", "group": "people", "price": 150, "note": "", "description": "A hand-drawn portrait of one person from your photos, for a gift, a keepsake or a profile picture.", "etsyUrl": "" },
+    { "id": "duo-portrait", "name": "Duo Portrait", "group": "people", "price": 225, "note": "", "description": "Two people in one portrait: partners, best friends, siblings, or a parent and child, drawn together.", "etsyUrl": "" },
+    { "id": "animal-face", "name": "Animal Portrait (Face)", "group": "pets", "price": 125, "note": "", "description": "A close-up of your pet's face that captures the expression you know best.", "etsyUrl": "" },
+    { "id": "animal-full-body", "name": "Animal Portrait (Full Body)", "group": "pets", "price": 200, "note": "", "description": "Your pet drawn from head to tail in a favourite pose, from the photos you send.", "etsyUrl": "" },
+    { "id": "logo-design", "name": "Logo Design", "group": "logos", "price": 250, "note": "Includes 1 edit", "description": "A custom logo for your business or project, shaped around your name, your style and your audience.", "etsyUrl": "" },
+    { "id": "logo-suite", "name": "Logo Suite", "group": "logos", "price": 500, "note": "Includes 2 edits", "description": "Your main logo plus [matching variations], so your brand looks consistent everywhere it appears.", "etsyUrl": "" },
+    { "id": "custom-commission", "name": "Custom Commission", "group": "custom", "price": 170, "note": "", "description": "Have something else in mind? Tell me your idea and we'll work out the details together first.", "etsyUrl": "" }
   ]
 }

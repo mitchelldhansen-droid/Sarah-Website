@@ -1,7 +1,7 @@
 [
-  { "file": "personal_01", "title": "[Title 1]", "year": "[Year]", "alt": "" },
-  { "file": "personal_02", "title": "[Title 2]", "year": "[Year]", "alt": "" },
-  { "file": "personal_03", "title": "[Title 3]", "year": "[Year]", "alt": "" },
-  { "file": "personal_04", "title": "[Title 4]", "year": "[Year]", "alt": "" },
-  { "file": "personal_05", "title": "[Title 5]", "year": "[Year]", "alt": "" }
+  { "file": "personal_01", "title": "Sunday Market", "year": "[Year]", "alt": "" },
+  { "file": "personal_02", "title": "Garden in June", "year": "[Year]", "alt": "" },
+  { "file": "personal_03", "title": "Night Owl", "year": "[Year]", "alt": "" },
+  { "file": "personal_04", "title": "Tea for One", "year": "[Year]", "alt": "" },
+  { "file": "personal_05", "title": "Autumn Walk", "year": "[Year]", "alt": "" }
 ]
