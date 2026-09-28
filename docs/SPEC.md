@@ -428,9 +428,9 @@ Nothing here blocks starting the build: placeholders cover every missing piece o
 
 **Design gaps (Mitchell can do these without Sarah)**
 
-- [ ] Phone lightbox: a full-screen sheet with the art on top, details below, and the Commission button pinned to the bottom
-- [ ] Logo lightbox in Warm Sketchbook style: two package cards (Logo Design, Logo Suite), each with price, note and button
-- [ ] Personal-piece lightbox: title and year, no button
+- [x] Phone lightbox: a full-screen sheet with the art on top, details below, and the Commission button pinned to the bottom (built as described; used below 1024 px)
+- [x] Logo lightbox in Warm Sketchbook style: two package cards (Logo Design, Logo Suite), each with price, note and button (built as compact rows: name, price and note left, a "Commission" button right whose hidden text names the package)
+- [x] Personal-piece lightbox: title and year, no button
 - [x] Phone menu panel (built as suggested under Components: card panel under the header, 56 px rows, 20 px text)
 - [ ] Tablet layout (described in words above; check it during the build)
 - [ ] Hover states for buttons and chips (described above, not drawn)
@@ -467,7 +467,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 4. Hero: text, the two buttons, art cluster with placeholder images
 - [x] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles
 - [x] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement
-- [ ] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
+- [x] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
 - [ ] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion
 - [ ] 9. About card, FAQ with `<details>`, contact band, footer
 - [ ] 10. Motion pass, including reduced motion

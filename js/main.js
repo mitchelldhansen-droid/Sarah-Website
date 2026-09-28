@@ -1,8 +1,10 @@
 // Starts each part of the page, loading the data files first.
 import { initNav } from './nav.js';
 import { initGallery } from './gallery.js';
+import { initLightbox } from './lightbox.js';
 
 initNav();
+initLightbox();
 
 async function loadJSON(path) {
   const response = await fetch(path);

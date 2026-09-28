@@ -157,5 +157,45 @@
     <p>© 2026 Sarah Rose Costa</p>
     <a href="#top">Back to top</a>
   </footer>
+
+  <!-- Lightbox, filled and opened by js/lightbox.js. data-shop-url is where
+       Etsy buttons go when an offering has no listing link yet. -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title" data-shop-url="#">
+    <div class="lightbox-panel">
+      <button class="lightbox-close" type="button" aria-label="Close" autofocus>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+      </button>
+      <div class="lightbox-art">
+        <img alt="" sizes="(min-width: 1024px) 470px, 100vw">
+      </div>
+      <div class="lightbox-info">
+        <p class="lightbox-group"></p>
+        <h2 id="lightbox-title"></h2>
+        <p class="lightbox-price"></p>
+        <p class="lightbox-year"></p>
+        <p class="lightbox-description"></p>
+        <div class="lightbox-actions"></div>
+        <div class="lightbox-nav">
+          <button class="lightbox-step" type="button" aria-label="Previous piece" data-step="-1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            Previous
+          </button>
+          <span class="lightbox-counter"></span>
+          <button class="lightbox-step" type="button" aria-label="Next piece" data-step="1">
+            Next
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <p class="visually-hidden" id="lightbox-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <template id="etsy-button-template">
+    <a class="btn btn-primary etsy-button" target="_blank" rel="noopener">
+      <span class="etsy-label"></span><span class="visually-hidden"></span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M9 7h8v8"/></svg>
+    </a>
+  </template>
 </body>
 </html>

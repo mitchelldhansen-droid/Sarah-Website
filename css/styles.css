@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+/* The hidden attribute always wins, even over a class that sets display */
+[hidden] {
+  display: none !important;
+}
+
 /* Anchor links glide, unless the device asks for less motion */
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -654,4 +659,280 @@ section {
 
 .skip-link:focus {
   transform: none;
+}
+
+/* Lightbox. Phones and tablets: a full-screen sheet that scrolls as a whole,
+   art on top, Commission button pinned to the bottom. Desktop: a centred
+   panel with the art left and the details right. --piece-tint is set by
+   lightbox.js from the piece's group. */
+html:has(.lightbox[open]) {
+  overflow: hidden; /* the page behind stops scrolling */
+}
+
+.lightbox {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0; /* so only a click on the backdrop targets the dialog itself */
+  border: 0;
+  background: var(--color-card);
+  color: var(--color-ink);
+  overflow-y: auto;
+}
+
+.lightbox::backdrop {
+  background: var(--color-backdrop);
+}
+
+.lightbox-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-4) var(--gutter) 0;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+/* The whole piece, never cropped: contain letterboxes it inside the box.
+   The tint shows while it loads, or if the file is missing. */
+.lightbox-art {
+  width: 100%;
+  max-height: 65dvh;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-tile);
+  background: var(--piece-tint);
+  touch-action: pan-y pinch-zoom; /* sideways drags come to the swipe code */
+}
+
+.lightbox-art.is-loaded {
+  background: var(--color-card);
+}
+
+.lightbox-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-art.is-missing img {
+  visibility: hidden;
+}
+
+.lightbox-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.lightbox-info > * {
+  margin: 0;
+}
+
+.lightbox-group {
+  align-self: flex-start;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--piece-tint);
+  font-size: var(--text-small);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.lightbox-info h2 {
+  font-size: var(--text-panel);
+}
+
+.lightbox-price {
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: var(--text-price);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.lightbox-year,
+.lightbox-description,
+.lightbox-note,
+.lightbox-counter,
+.package-note {
+  color: var(--color-muted);
+}
+
+.lightbox-description {
+  font-size: var(--text-body-sm);
+  line-height: 1.6;
+}
+
+.lightbox-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Pinned to the bottom of the sheet while the details scroll past */
+.lightbox-actions:not(.has-packages) {
+  position: sticky;
+  bottom: 0;
+  margin-inline: calc(var(--gutter) * -1);
+  padding: var(--space-3) var(--gutter);
+  background: var(--color-card);
+}
+
+.etsy-button {
+  min-height: 56px;
+}
+
+.lightbox-note {
+  margin: 0;
+  font-size: var(--text-small);
+  text-align: center;
+}
+
+/* Logo pieces: a card per package, wrapping the button under the text if
+   the row gets too narrow */
+.package {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: var(--border-w) solid var(--color-border-soft);
+  border-radius: var(--radius-tile);
+}
+
+.package-text > * {
+  margin: 0;
+}
+
+.package-name,
+.package-price {
+  font-family: var(--font-display);
+  font-size: var(--text-card-title);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.package-price {
+  color: var(--color-accent);
+}
+
+.package-note {
+  font-size: var(--text-small);
+}
+
+.package .etsy-button {
+  min-height: 46px;
+}
+
+.lightbox-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: var(--space-5);
+  border-top: var(--border-w) solid var(--color-border-soft);
+}
+
+.lightbox-step {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  padding-inline: var(--space-3) var(--space-4);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-card);
+  color: var(--color-ink);
+  font: inherit;
+  font-size: var(--text-chip);
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 150ms ease;
+}
+
+.lightbox-step:last-child {
+  padding-inline: var(--space-4) var(--space-3);
+}
+
+.lightbox-step:hover {
+  border-color: var(--color-ink);
+}
+
+.lightbox-counter {
+  font-size: var(--text-chip);
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .lightbox {
+    width: min(1040px, 100% - 2 * var(--gutter));
+    height: min(660px, 100% - 2 * var(--space-7));
+    margin: auto;
+    overflow: hidden;
+    border-radius: var(--radius-panel);
+    box-shadow: var(--shadow-modal);
+  }
+
+  .lightbox-panel {
+    flex-direction: row;
+    gap: var(--space-7);
+    height: 100%;
+    padding: var(--space-6);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+  }
+
+  /* Full panel height; the width follows from the 4:5 shape */
+  .lightbox-art {
+    flex-shrink: 0;
+    width: auto;
+    height: 100%;
+    max-height: none;
+  }
+
+  /* A long description scrolls inside this column. "safe" keeps the top
+     reachable when the content is taller than the column. */
+  .lightbox-info {
+    flex: 1;
+    justify-content: safe center;
+    min-width: 0;
+    overflow-y: auto;
+    padding-right: var(--space-4);
+  }
+
+  .lightbox-actions:not(.has-packages) {
+    position: static;
+    margin-inline: 0;
+    padding: 0;
+  }
+
+  .lightbox-nav {
+    margin-top: var(--space-4);
+    padding-bottom: 0;
+  }
 }

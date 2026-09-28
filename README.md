@@ -14,6 +14,8 @@ py -m http.server
 
 Then open http://localhost:8000. (Opening `index.html` directly won't work, because browsers block the data files the page loads.)
 
+If a change doesn't show up, the browser is probably using an old cached copy: press Ctrl+Shift+R to reload without the cache, or tick "Disable cache" in the DevTools Network tab (it works while DevTools is open).
+
 ## Add a new piece
 
 1. Export the piece twice, as WebP at about 80% quality (sizes are in `docs/SPEC.md` → Content and data):
