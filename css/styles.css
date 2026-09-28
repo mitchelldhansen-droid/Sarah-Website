@@ -1254,7 +1254,7 @@ html:has(.lightbox[open]) {
 .lightbox-art {
   width: 100%;
   max-height: 65dvh;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: var(--art-ratio, 4 / 5); /* the art's own shape, set by lightbox.js */
   overflow: hidden;
   border-radius: var(--radius-tile);
   background: var(--piece-tint);
@@ -1450,12 +1450,14 @@ html:has(.lightbox[open]) {
     right: var(--space-4);
   }
 
-  /* Full panel height; the width follows from the 4:5 shape */
+  /* Full panel height; the width follows from the 4:5 shape. Always 4:5 here:
+     the art's own shape would push a wide piece out of the panel. */
   .lightbox-art {
     flex-shrink: 0;
     width: auto;
     height: 100%;
     max-height: none;
+    aspect-ratio: 4 / 5;
   }
 
   /* A long description scrolls inside this column. "safe" keeps the top

@@ -96,6 +96,8 @@ function show() {
   const single = offerings.length === 1 ? offerings[0] : null;
 
   dialog.style.setProperty('--piece-tint', piece.tint);
+  // The art's shape (from the image-prep script); phones size the art box to it
+  art.style.setProperty('--art-ratio', piece.width ? `${piece.width} / ${piece.height}` : '');
   art.classList.remove('is-loaded', 'is-missing');
   img.alt = piece.alt;
   img.srcset = srcset(piece.file);

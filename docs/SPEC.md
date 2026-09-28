@@ -269,7 +269,9 @@ All changing content lives in three files under `data/`. Adding a piece means ad
 ]
 ```
 
-**personal.json** lists the carousel pieces in order.
+Once `tools/prepare_images.py` has run, each entry also has `"width"` and `"height"`: the size of its 1400 px lightbox image. Nobody types these; the script writes them. Phones size the lightbox's art area to that shape; without them it's 4:5.
+
+**personal.json** lists the carousel pieces in order (and gets `width` and `height` the same way).
 
 ```json
 [
@@ -294,7 +296,7 @@ Crop every thumbnail by hand to its exact size, and have Sarah approve the crops
 | Link preview (Open Graph) | 1.91:1 | 1200 × 630 | `images/og.jpg` (JPG, because some apps don't show WebP previews) |
 | Favicon | Square | SVG, plus a 180 px PNG for iPhones | site root |
 
-Use WebP at about 80% quality. These sizes cover high-density ("retina") screens at the largest size each image is shown.
+Use WebP at about 80% quality; `tools/prepare_images.py` makes all of these except the Open Graph image and favicon. These sizes cover high-density ("retina") screens at the largest size each image is shown.
 
 **Text limits**
 
@@ -324,7 +326,7 @@ The rule of thumb: when something is missing, fall back to the Etsy shop rather 
 | Long offering name | Desktop hover caption: one line, ends in "…". Phone caption: up to two lines. The full name always shows in the lightbox and screen-reader label |
 | Long description | Desktop: the lightbox text column scrolls inside the panel. Phone: the whole lightbox scrolls |
 | Only one piece in the current list | Lightbox hides Previous/Next and the counter |
-| Very wide or very tall artwork | Shown whole inside the lightbox's image area (`object-fit: contain`, which never crops); the card colour fills the space around it |
+| Very wide or very tall artwork | Shown whole inside the lightbox's image area (`object-fit: contain`, which never crops). Desktop: the area stays 4:5 and the card colour fills the space around the art. Phones: the area takes the art's shape (from `width` and `height` in the data), up to 65% of the screen height, so a wide logo doesn't push the buttons off screen |
 | Gallery grows past about 24 pieces | Not designed yet. A "Show more" button after the first 12 on phones is the likely fix |
 | An Etsy listing is removed | Etsy shows its own "not found" page. Check every link before launch, and whenever listings change |
 
@@ -388,7 +390,10 @@ The site ships as plain files on GitHub Pages. The targets below keep it fast on
 │   ├── offerings.json
 │   ├── gallery.json
 │   └── personal.json
-├── images/             thumbs/, full/, personal/, hero/
+├── images/             thumbs/, full/, personal/, hero/ (made by tools/prepare_images.py)
+├── originals/          Sarah's full-size exports; git-ignored, stays on the computer
+├── tools/
+│   └── prepare_images.py   exports originals/ to images/ and records each piece's shape (Python + Pillow)
 ├── docs/               SPEC.md, BRIEF.md, design/
 ├── favicon.svg
 ├── apple-touch-icon.png   180 px, for iPhone home screens

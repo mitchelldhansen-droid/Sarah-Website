@@ -26,6 +26,8 @@ export function initGallery({ groups, offerings }, entries) {
       label: labels.get(groupId),
       tint: `var(--tint-${groupId})`,
       offerings: tileOfferings,
+      width: entry.width,
+      height: entry.height,
     };
     const item = makeTile(template, piece, groupId);
     pieces.set(item, piece);

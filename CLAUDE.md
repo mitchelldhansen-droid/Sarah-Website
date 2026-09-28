@@ -11,6 +11,7 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 ## Stack and rules
 
 - Plain HTML, CSS and vanilla JavaScript (ES modules). No framework, no build step, no npm dependencies, unless Mitchell decides otherwise.
+- `tools/` holds Python helper scripts run on Mitchell's computer (they use Pillow, approved Sept 28, 2026). They're not part of the site, which stays dependency-free.
 - Run locally with `py -m http.server` (or `python -m http.server`) from the repo root, then open http://localhost:8000. Opening index.html directly won't load the JSON.
 - Colours, type, spacing, radii and shadows come only from the tokens in `css/tokens.css`. No raw hex values elsewhere.
 - Offering names, prices and Etsy listing links live only in `data/offerings.json`. Never hard-code them in HTML or JS. The main Etsy shop link, email and Instagram are the exception: they're hard-coded in `index.html` (see SPEC → Content and data).
@@ -34,7 +35,7 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 - The v1 site (single index.html, green/purple, Playfair + Lora) was removed on Sept 27, 2026. It's in git history at commit 4bfa10f.
 - Stack confirmed: plain HTML, CSS and vanilla JS.
 - Milestones 1–12 done: every section is built, styled, animated, checked from 320 to 1600 px, and passes an accessibility audit (Lighthouse Accessibility 100, NVDA run clean).
-- Milestone 13 is paused until Sarah sends content (Mitchell's call, Sept 28, 2026). Milestone 14 started early, in parts: part 1 (favicon, touch icon, head tags, JS budget wording) done; part 2 is a Python image-prep script in `tools/` (uses Pillow) that also writes each piece's width/height into the data so the phone lightbox's art box matches the art's shape; part 3 is a content checker.
+- Milestone 13 is paused until Sarah sends content (Mitchell's call, Sept 28, 2026). Milestone 14 started early, in parts: part 1 (favicon, touch icon, head tags, JS budget wording) and part 2 (`tools/prepare_images.py`: `originals/` → `images/`, writes each full piece's `width`/`height` into the data; phones size the lightbox art box from them via `--art-ratio`, desktop stays 4:5) done; part 3 is a content checker. The data files have no `width`/`height` yet: they arrive when the script runs on Sarah's real images.
 - Lighthouse Best Practices is 92 only because placeholder images 404 in the console; expect it to rise once real images are in.
 - Milestone 13 in progress: draft copy (offering descriptions, About, FAQ answers, personal titles) is in the site as a starting point. It is NOT final: `docs/BRIEF.md` → "Drafts in the site" lists every draft, and every [bracketed] gap is a fact only Sarah can supply. Nothing launches until that checklist and "Content still needed" are cleared.
 - The lightbox is opened with `openLightbox(pieces, index, openerElement)`; personal pieces are `{ file, alt, title, label: 'Personal', tint: 'var(--tint-personal)', year }` with no `offerings`.

@@ -23,6 +23,8 @@ export function initCarousel(entries) {
     label: 'Personal',
     tint: 'var(--tint-personal)',
     year: entry.year,
+    width: entry.width,
+    height: entry.height,
   }));
 
   pieces.forEach((piece, index) => {
