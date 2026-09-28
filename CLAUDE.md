@@ -35,10 +35,27 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 - The v1 site (single index.html, green/purple, Playfair + Lora) was removed on Sept 27, 2026. It's in git history at commit 4bfa10f.
 - Stack confirmed: plain HTML, CSS and vanilla JS.
 - Milestones 1–12 done: every section is built, styled, animated, checked from 320 to 1600 px, and passes an accessibility audit (Lighthouse Accessibility 100, NVDA run clean).
-- Milestone 13 is paused until Sarah sends content (Mitchell's call, Sept 28, 2026). Milestone 14 started early, in parts, all three done: part 1 (favicon, touch icon, head tags, JS budget wording), part 2 (`tools/prepare_images.py`: `originals/` → `images/`, writes each full piece's `width`/`height` into the data; phones size the lightbox art box from them via `--art-ratio`, desktop stays 4:5) and part 3 (`tools/check_content.py`: read-only launch check, exit code 1 while anything is left). What remains of 14 (og.jpg, performance check with real images, domain, HTTPS, launch) waits on Sarah, like 13. Run `py tools/check_content.py` for the current launch list. The data files have no `width`/`height` yet: they arrive when the script runs on Sarah's real images.
+- Milestone 13 (real content) is paused until Sarah sends content (Mitchell's call, Sept 28, 2026). Draft copy (offering descriptions, About, FAQ answers, personal titles) is in the site as a starting point but is NOT final: `docs/BRIEF.md` → "Drafts in the site" lists every draft, and every [bracketed] gap is a fact only Sarah can supply. Nothing launches until that checklist and "Content still needed" are cleared.
+- Milestone 14 was started early, and everything in it that doesn't need Sarah is done (Sept 28, 2026, through commit 539153e):
+  - Favicon, 180 px touch icon, canonical, Open Graph and Twitter tags. They use the GitHub Pages address (3 places in `<head>`, marked by a comment) until the domain is chosen. JSON-LD is left out until the Etsy and Instagram links exist.
+  - `tools/prepare_images.py` (Pillow): `originals/` (git-ignored) → `images/`. It never crops, and it writes each full piece's `width`/`height` into `gallery.json`/`personal.json`. Phones size the lightbox art box from them via `--art-ratio`; desktop stays 4:5. The data has no `width`/`height` yet: they arrive when the script runs on Sarah's real images.
+  - `tools/check_content.py`: read-only launch check, which exits with code 1 while anything is left (62 items on Sept 28). Run it for the current launch list.
+  - `docs/BROWSER-TESTING.md`: a 38-step Firefox and iPhone Safari checklist.
+  - The JS budget means gzipped: 6.2 KB of 15.
+- A stand-in image test confirmed the image code works (fade-ins, `srcset`, preloading, missing-image fallback, extreme shapes). A phone's first load is the hero, About photo and first 8 thumbnails, about 770 KB if Sarah's exports land near 50 KB each.
 - Lighthouse Best Practices is 92 only because placeholder images 404 in the console; expect it to rise once real images are in.
-- Milestone 13 in progress: draft copy (offering descriptions, About, FAQ answers, personal titles) is in the site as a starting point. It is NOT final: `docs/BRIEF.md` → "Drafts in the site" lists every draft, and every [bracketed] gap is a fact only Sarah can supply. Nothing launches until that checklist and "Content still needed" are cleared.
-- The lightbox is opened with `openLightbox(pieces, index, openerElement)`; personal pieces are `{ file, alt, title, label: 'Personal', tint: 'var(--tint-personal)', year }` with no `offerings`.
+- `.claude/launch.json` runs Claude's preview server ("site") on port 8001, clear of Mitchell's own server on 8000.
+
+## Where we left off (Sept 28, 2026)
+
+1. **Mitchell to run `docs/BROWSER-TESTING.md`** on Firefox and an iPhone. Failures come back as "browser + step number"; fix them one at a time.
+2. **Waiting on Sarah** for the items in `docs/BRIEF.md` → "Content still needed" and "Drafts in the site". When they arrive, milestone 13 resumes: exports into `originals/`, run `py tools/prepare_images.py`, fill in the text and links, draft alt text (patterns in BRIEF), then run `py tools/check_content.py` until it's clear, and click every Etsy link by hand.
+3. **Then the rest of milestone 14:** `images/og.jpg` (1200 × 630, from her art), Lighthouse with real images, the custom domain (swap the address in `<head>`), Enforce HTTPS, launch.
+4. Not yet decided (SPEC → Open items → Decisions to confirm): the name on the site, whether the carousel autoplays, and the hero subline wording. These need Sarah.
+
+## Code facts
+
+- The lightbox is opened with `openLightbox(pieces, index, openerElement)`; personal pieces are `{ file, alt, title, label: 'Personal', tint: 'var(--tint-personal)', year, width, height }` with no `offerings`. `width`/`height` are undefined until the image script has run.
 - Filtering sets `hidden` on gallery `<li>`s; the lightbox's list is the tiles that aren't hidden.
 - Images point at their final paths from the spec before the files exist; the group tint shows until Sarah's images are dropped in.
 - Text-size tokens are in `rem` (Mitchell's choice, so they follow the visitor's browser text size); spacing and radii stay in `px`.
