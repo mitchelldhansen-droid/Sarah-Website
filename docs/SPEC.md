@@ -473,6 +473,6 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 9. About card, FAQ with `<details>`, contact band, footer
 - [x] 10. Motion pass, including reduced motion
 - [x] 11. Responsive pass at 320, 390, 768, 1024, 1280 and 1600 px
-- [ ] 12. Accessibility pass: keyboard only, a screen reader, Lighthouse (structure, contrast and keyboard checks done and fixed; Lighthouse and a screen-reader run still to do)
+- [x] 12. Accessibility pass: keyboard only, a screen reader, Lighthouse (Lighthouse Accessibility 100; NVDA run clean)
 - [ ] 13. Real content and images from Sarah; alt text; check every Etsy link
 - [ ] 14. Open Graph image and tags, favicon, performance check, custom domain and HTTPS, launch

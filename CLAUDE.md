@@ -33,8 +33,9 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 
 - The v1 site (single index.html, green/purple, Playfair + Lora) was removed on Sept 27, 2026. It's in git history at commit 4bfa10f.
 - Stack confirmed: plain HTML, CSS and vanilla JS.
-- Milestones 1–11 done: every section is built, styled, animated and checked from 320 to 1600 px.
-- Milestone 12 in progress: the structure, contrast and keyboard audit is done and its three fixes are in. Waiting on Mitchell's Lighthouse score and a screen-reader run (NVDA or VoiceOver); fix anything they find, then tick milestone 12.
+- Milestones 1–12 done: every section is built, styled, animated, checked from 320 to 1600 px, and passes an accessibility audit (Lighthouse Accessibility 100, NVDA run clean).
+- Lighthouse Best Practices is 92 only because placeholder images 404 in the console; expect it to rise once real images are in.
+- Next: milestone 13 (Sarah's real content). It's blocked until her content arrives; see `docs/BRIEF.md` → Content still needed.
 - The lightbox is opened with `openLightbox(pieces, index, openerElement)`; personal pieces are `{ file, alt, title, label: 'Personal', tint: 'var(--tint-personal)', year }` with no `offerings`.
 - Filtering sets `hidden` on gallery `<li>`s; the lightbox's list is the tiles that aren't hidden.
 - Images point at their final paths from the spec before the files exist; the group tint shows until Sarah's images are dropped in.
