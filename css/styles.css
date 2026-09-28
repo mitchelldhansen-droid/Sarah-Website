@@ -505,6 +505,232 @@ section {
   }
 }
 
+/* "See more of my work" with a wavy line either side. The lines shrink on
+   small screens (the SVG crops instead of squashing). */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--color-accent);
+}
+
+.divider h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: var(--text-divider);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* The lines start at zero width and grow into whatever the heading leaves,
+   up to 180 px, so the heading keeps one line wherever it fits */
+.divider-line {
+  flex: 1 1 0;
+  min-width: var(--space-6);
+  max-width: 180px;
+  height: 16px;
+}
+
+/* Carousel. Cards run off the right edge (to the screen edge up to 1280 px,
+   then to the edge of the centred column). */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-top: var(--space-6);
+}
+
+.carousel-controls {
+  order: 1; /* shown under the cards, but first in tab order */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* The small negative left margin and matching padding leave room for the
+   first card's focus ring, which the scrolling box would otherwise clip */
+.carousel-track {
+  display: flex;
+  gap: var(--space-4);
+  margin: 0 calc(var(--gutter) * -1) 0 calc(var(--space-2) * -1);
+  padding: var(--space-2);
+  padding-right: 0;
+  scroll-padding-inline-start: var(--space-2);
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* the arrows do this job */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .carousel-track {
+    scroll-behavior: smooth;
+  }
+}
+
+.carousel-slide {
+  flex: 0 0 270px;
+  scroll-snap-align: start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3);
+  border: 0;
+  border-radius: var(--radius-card);
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.card-art {
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-inset);
+  background: var(--tint-personal);
+}
+
+.card-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card.is-missing img {
+  display: none;
+}
+
+.card-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: 0 var(--space-1) var(--space-1);
+}
+
+.card-title {
+  min-width: 0;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: var(--text-card-title);
+  font-weight: 500;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-year {
+  flex-shrink: 0;
+  color: var(--color-muted);
+  font-size: var(--text-small);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.carousel-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+  transition: background-color 150ms ease;
+}
+
+.carousel-dots .is-current {
+  background: var(--color-ink);
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.carousel-button:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Pause is an outline button; its icon swaps to "play" while paused */
+.carousel-pause {
+  border: var(--border-w) solid var(--color-ink);
+  background: none;
+  color: var(--color-ink);
+}
+
+.carousel-pause:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.carousel-pause .icon-play,
+.carousel-pause.is-paused .icon-pause {
+  display: none;
+}
+
+.carousel-pause.is-paused .icon-play {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .divider {
+    gap: var(--space-5);
+  }
+
+  .carousel {
+    gap: var(--space-6);
+    padding-top: var(--space-7);
+  }
+
+  .carousel-track {
+    gap: var(--space-5);
+  }
+
+  .carousel-slide {
+    flex-basis: 320px;
+  }
+
+  .carousel-dots span {
+    width: 10px;
+    height: 10px;
+  }
+
+  .carousel-buttons {
+    gap: var(--space-3);
+  }
+
+  .carousel-button {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 /* Header. Compact (wordmark, Shop, menu button) until 820 px, then full. */
 .site-header {
   position: sticky;

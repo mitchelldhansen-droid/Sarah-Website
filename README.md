@@ -34,6 +34,12 @@ If a change doesn't show up, the browser is probably using an old cached copy: p
 
 If a tile shows its name on a coloured square instead of the art, the image file is missing or misnamed; the browser console says which file it looked for.
 
+**Personal pieces** (the "See more of my work" carousel) work the same way, with two differences: the card image is a 4:5 portrait, 600 × 750 → `images/personal/<name>.webp`, and the entry goes in `data/personal.json` with a title and year instead of offerings:
+
+```json
+{ "file": "personal_06", "title": "Harbour at dusk", "year": "2025", "alt": "Gouache painting of fishing boats at dusk" }
+```
+
 ## Deploy
 
 The site is published with GitHub Pages from the `main` branch. Pushing to `main` updates the live site within a minute or two.

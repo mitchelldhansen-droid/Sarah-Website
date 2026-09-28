@@ -347,7 +347,7 @@ Target WCAG 2.2 level AA. Most of it comes free from using the right HTML elemen
 | Gallery tile | A `<button>` whose accessible name is the image's alt text plus offering and price, for example "Watercolour of a beagle. Animal Portrait (Face), $125+". The hover caption stays in the page for screen readers even when it's visually hidden |
 | Lightbox | Build it with the native `<dialog>` element and `showModal()`. That gives you the focus trap, Esc to close and an inert page behind for free. `aria-labelledby` points at the title. Previous/Next buttons are labelled "Previous piece" and "Next piece"; the counter and title update inside an `aria-live="polite"` region |
 | Etsy buttons | Visible label plus hidden text "(opens Etsy in a new tab)". Logo buttons name their package: "Commission Logo Design" and "Commission Logo Suite" |
-| Carousel | `<section aria-roledescription="carousel" aria-label="Personal work">`. Each card is a group labelled "2 of 5". The pause button comes first in tab order within the carousel. The live region is `off` while autoplaying and `polite` when paused, so screen readers aren't interrupted every 6 seconds |
+| Carousel | `<section aria-roledescription="carousel" aria-label="Personal work">`. Each card is a group labelled "2 of 5". The pause button comes first in tab order within the carousel. Every card is always on the page (it's a scrolling row), so nothing is announced by itself. Instead, pressing Previous or Next updates a polite live region ("Title, 3 of 5"), and autoplay never announces, so screen readers aren't interrupted every 6 seconds |
 | Phone menu | Button has `aria-expanded` and `aria-controls` |
 | Icons | Decorative SVGs get `aria-hidden="true"`. Icon-only buttons (close, arrows, pause, menu) get an `aria-label` |
 | Hero art | `alt=""`, because the same pieces are in the gallery with full descriptions |
@@ -468,7 +468,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles
 - [x] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement
 - [x] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
-- [ ] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion
+- [x] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion
 - [ ] 9. About card, FAQ with `<details>`, contact band, footer
 - [ ] 10. Motion pass, including reduced motion
 - [ ] 11. Responsive pass at 320, 390, 768, 1024, 1280 and 1600 px
