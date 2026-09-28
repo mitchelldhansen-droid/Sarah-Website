@@ -49,6 +49,14 @@ If a tile shows its name on a coloured square instead of the art, the image file
 
 The hero pieces and About photo go through the same script; the top of `tools/prepare_images.py` lists where each one goes.
 
+## Check what's left before launch
+
+```
+py tools/check_content.py
+```
+
+It lists anything wrong in the data files (an offering id with a typo, a file name used twice, a link that isn't an Etsy address) and everything still to come: blank Etsy links and alt text, missing images, `[bracketed]` placeholders, links that go nowhere and text over the spec's length limits. It changes nothing. It can't visit the Etsy links (Etsy blocks scripts), so click each one yourself before launch.
+
 ## Deploy
 
 The site is published with GitHub Pages from the `main` branch. Pushing to `main` updates the live site within a minute or two.

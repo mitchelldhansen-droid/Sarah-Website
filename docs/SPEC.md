@@ -393,7 +393,8 @@ The site ships as plain files on GitHub Pages. The targets below keep it fast on
 ├── images/             thumbs/, full/, personal/, hero/ (made by tools/prepare_images.py)
 ├── originals/          Sarah's full-size exports; git-ignored, stays on the computer
 ├── tools/
-│   └── prepare_images.py   exports originals/ to images/ and records each piece's shape (Python + Pillow)
+│   ├── prepare_images.py   exports originals/ to images/ and records each piece's shape (Python + Pillow)
+│   └── check_content.py    lists data mistakes and content still missing before launch (Python, no libraries)
 ├── docs/               SPEC.md, BRIEF.md, design/
 ├── favicon.svg
 ├── apple-touch-icon.png   180 px, for iPhone home screens
