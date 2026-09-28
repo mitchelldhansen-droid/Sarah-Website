@@ -391,6 +391,7 @@ The site ships as plain files on GitHub Pages. The targets below keep it fast on
 ├── images/             thumbs/, full/, personal/, hero/
 ├── docs/               SPEC.md, BRIEF.md, design/
 ├── favicon.svg
+├── apple-touch-icon.png   180 px, for iPhone home screens
 ├── CNAME               the custom domain, for GitHub Pages
 ├── CLAUDE.md
 ├── README.md           how to add a piece, how to deploy
@@ -411,7 +412,7 @@ The site ships as plain files on GitHub Pages. The targets below keep it fast on
 | --- | --- |
 | First-load page weight | Under 1 MB (fonts about 100 KB, hero about 150 KB, first eight thumbnails about 400 KB) |
 | Each thumbnail | Under 60 KB |
-| All JavaScript | Under 15 KB, no libraries: no jQuery, no carousel plugin |
+| All JavaScript | Under 15 KB compressed (gzip, as GitHub Pages serves it), no libraries: no jQuery, no carousel plugin |
 | Lighthouse Performance, mobile | 90 or higher |
 
 - Add `preconnect` hints for fonts.googleapis.com and fonts.gstatic.com, and load only the weights listed in the tokens.
@@ -420,7 +421,7 @@ The site ships as plain files on GitHub Pages. The targets below keep it fast on
 **Hosting**
 
 - One GitHub repository, published with GitHub Pages from the main branch. Hosting is free; the domain is the only cost.
-- Custom domain: add it under the repository's Settings → Pages, set the DNS records at the domain registrar as GitHub's custom domain guide describes (https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site), then turn on "Enforce HTTPS".
+- Custom domain: add it under the repository's Settings → Pages, set the DNS records at the domain registrar as GitHub's custom domain guide describes (https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site), then turn on "Enforce HTTPS". Then swap the GitHub Pages address in `index.html`'s `<head>` (canonical, `og:url`, `og:image`) for the domain.
 - Keep README.md current with two how-tos: adding a new piece (export the images, add one JSON entry, push) and deploying.
 
 ## Open items
