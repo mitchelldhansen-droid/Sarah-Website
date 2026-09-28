@@ -119,11 +119,13 @@
           </button>
         </div>
       </div>
-      <ul class="carousel-track" role="list"></ul>
+      <!-- Plain divs, not a list: each slide needs role="group" for "2 of 5",
+           and a list may only contain list items -->
+      <div class="carousel-track"></div>
       <p class="visually-hidden" id="carousel-status" aria-live="polite"></p>
 
       <template id="card-template">
-        <li class="carousel-slide" role="group" aria-roledescription="slide">
+        <div class="carousel-slide" role="group" aria-roledescription="slide">
           <button class="card" type="button">
             <span class="card-art">
               <img alt="" width="600" height="750" loading="lazy">
@@ -133,7 +135,7 @@
               <span class="card-year"></span>
             </span>
           </button>
-        </li>
+        </div>
       </template>
     </section>
 

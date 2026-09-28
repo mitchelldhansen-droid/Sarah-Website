@@ -143,7 +143,7 @@ The hero has no id on purpose. The wordmark and "Back to top" link to `#top`, an
 
 **Fluid type.** Rather than jumping between phone and desktop sizes, scale each text token smoothly with `clamp()`. For the hero: `clamp(40px, 29.5px + 2.7vw, 64px)`. Every token follows the same pattern: it grows in a straight line from its phone size at a 390 px screen to its desktop size at 1280 px, then stops.
 
-**Sticky header offset.** Give every section `scroll-margin-top` equal to the header height plus 16 px, so tapping a nav link doesn't hide the section heading under the header.
+**Sticky header offset.** Give `<html>` a `scroll-padding-top` equal to the header height plus 16 px. Anything the browser scrolls into view then stops below the header: a section after a nav link, and a focused element when tabbing up the page (WCAG 2.2 "Focus Not Obscured").
 
 **Why these choices.** The grid drops to two columns on phones because tiles smaller than about 160 px lose too much detail to judge an art style. Captions sit under the tiles on phones because touch screens have no hover.
 
@@ -473,6 +473,6 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 9. About card, FAQ with `<details>`, contact band, footer
 - [x] 10. Motion pass, including reduced motion
 - [x] 11. Responsive pass at 320, 390, 768, 1024, 1280 and 1600 px
-- [ ] 12. Accessibility pass: keyboard only, a screen reader, Lighthouse
+- [ ] 12. Accessibility pass: keyboard only, a screen reader, Lighthouse (structure, contrast and keyboard checks done and fixed; Lighthouse and a screen-reader run still to do)
 - [ ] 13. Real content and images from Sarah; alt text; check every Etsy link
 - [ ] 14. Open Graph image and tags, favicon, performance check, custom domain and HTTPS, launch

@@ -112,7 +112,7 @@ export function initCarousel(entries) {
 }
 
 function makeCard(template, piece, index, count) {
-  const slide = template.content.firstElementChild.cloneNode(true); // the <li>
+  const slide = template.content.firstElementChild.cloneNode(true); // the slide <div>
   const card = slide.querySelector('.card');
   const img = slide.querySelector('img');
   const description = piece.alt === piece.title ? piece.title : `${piece.alt}. ${piece.title}`;

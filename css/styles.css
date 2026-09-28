@@ -63,10 +63,15 @@ footer {
   padding-inline: max(var(--gutter), (100% - var(--content-max)) / 2 + var(--gutter));
 }
 
-/* scroll-margin-top stops anchor jumps below the sticky header */
+/* The sticky header covers the top of the window, so anything the browser
+   scrolls into view (anchor jumps, keyboard focus, the skip link's target)
+   stops below it instead of underneath it */
+html {
+  scroll-padding-top: calc(var(--header-h) + var(--space-4));
+}
+
 section {
   padding-block: var(--section-pad);
-  scroll-margin-top: calc(var(--header-h) + var(--space-4));
 }
 
 /* Buttons (links styled as pills). Each use sets its own height. */
@@ -568,7 +573,6 @@ section {
   padding: var(--space-2);
   padding-right: 0;
   scroll-padding-inline-start: var(--space-2);
-  list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none; /* the arrows do this job */
@@ -1174,9 +1178,11 @@ section {
   white-space: nowrap;
 }
 
-/* Off screen until it receives keyboard focus */
+/* Off screen until it receives keyboard focus. The z-index puts it above
+   the sticky header (10), which would otherwise cover it. */
 .skip-link {
   position: absolute;
+  z-index: 20;
   top: var(--space-4);
   left: var(--space-4);
   padding: var(--space-3) var(--space-5);
