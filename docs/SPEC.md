@@ -169,7 +169,7 @@ Thirteen pieces make up the page. Eight are static HTML and CSS; the gallery, fi
 
 ## States and interactions
 
-Every interactive element gets the same visible focus ring: a 2 px teal outline with a 3 px offset, shown on `:focus-visible` only, so mouse users don't see it on click. Hover states are new here; the mockup shows only one hovered tile.
+Every interactive element gets the same visible focus ring: a 2 px teal outline with a 3 px offset, shown on `:focus-visible` only, so mouse users don't see it on click. The one exception is the navy contact band and footer, where the ring is cream (`--color-paper`): teal on navy is only about 2:1, below the 3:1 a focus indicator needs. Hover states are new here; the mockup shows only one hovered tile.
 
 | Element | State or trigger | Behavior |
 | --- | --- | --- |
@@ -433,7 +433,7 @@ Nothing here blocks starting the build: placeholders cover every missing piece o
 - [x] Personal-piece lightbox: title and year, no button
 - [x] Phone menu panel (built as suggested under Components: card panel under the header, 56 px rows, 20 px text)
 - [ ] Tablet layout (described in words above; check it during the build)
-- [ ] Hover states for buttons and chips (described above, not drawn)
+- [x] Hover states for buttons and chips (built as described in States and interactions)
 
 **Content from Sarah (blocks launch)**
 
@@ -441,7 +441,7 @@ Nothing here blocks starting the build: placeholders cover every missing piece o
 - [ ] Etsy listing link for each of the 7 offerings, plus the main shop link
 - [ ] Commission example images, each tagged with its offering
 - [ ] 5–10 personal pieces with titles and years
-- [ ] Three hero pieces and an About photo
+- [ ] Three hero pieces and an About photo (if it's a self-portrait rather than a photo, the About image's alt text should say so; it's "Sarah Rose Costa" for now)
 - [ ] Approval of the thumbnail crops
 - [ ] About text and FAQ answers
 - [ ] Contact email and Instagram handle
@@ -469,7 +469,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement
 - [x] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
 - [x] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion
-- [ ] 9. About card, FAQ with `<details>`, contact band, footer
+- [x] 9. About card, FAQ with `<details>`, contact band, footer
 - [ ] 10. Motion pass, including reduced motion
 - [ ] 11. Responsive pass at 320, 390, 768, 1024, 1280 and 1600 px
 - [ ] 12. Accessibility pass: keyboard only, a screen reader, Lighthouse

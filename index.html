@@ -137,61 +137,87 @@
       </template>
     </section>
 
-    <section id="about">
-      <!-- Round photo: milestone 9 -->
-      <p>About</p>
-      <h2>Hi, I'm Sarah.</h2>
-      <p>[Placeholder: About text from Sarah, 3 to 5 sentences in her own voice.]</p>
-      <a href="#gallery">Start a commission</a>
+    <section id="about" class="about">
+      <div class="about-card">
+        <!-- The tint shows until the photo arrives -->
+        <img class="about-photo" src="images/about.webp" alt="Sarah Rose Costa" width="640" height="640" loading="lazy">
+        <div class="about-text">
+          <p class="about-label">About</p>
+          <h2>Hi, I'm Sarah.</h2>
+          <p>[Placeholder: About text from Sarah, 3 to 5 sentences in her own voice.]</p>
+          <a class="btn btn-outline" href="#gallery">Start a commission</a>
+        </div>
+      </div>
     </section>
 
-    <section id="faq">
+    <!-- The plus icon's vertical stroke hides while an item is open, making
+         it a minus. The first item starts open, as in the mockup. -->
+    <section id="faq" class="faq">
       <h2>Good to know</h2>
-      <details>
-        <summary>How does ordering a commission work?</summary>
+      <details open>
+        <summary>How does ordering a commission work?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
         <p>[Placeholder: answer from Sarah.]</p>
       </details>
       <details>
-        <summary>What do I need to send you?</summary>
+        <summary>What do I need to send you?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
         <p>[Placeholder: answer from Sarah.]</p>
       </details>
       <details>
-        <summary>How long does a commission take?</summary>
+        <summary>How long does a commission take?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
         <p>[Placeholder: answer from Sarah.]</p>
       </details>
       <details>
-        <summary>How many revisions are included?</summary>
+        <summary>How many revisions are included?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
         <p>[Placeholder: answer from Sarah.]</p>
       </details>
       <details>
-        <summary>Will I get a physical piece or a digital file?</summary>
+        <summary>Will I get a physical piece or a digital file?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
         <p>[Placeholder: answer from Sarah.]</p>
       </details>
       <details>
-        <summary>Do you ship?</summary>
+        <summary>Do you ship?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
         <p>[Placeholder: answer from Sarah.]</p>
       </details>
       <details>
-        <summary>Can I request something that isn't listed?</summary>
+        <summary>Can I request something that isn't listed?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
         <p>[Placeholder: answer from Sarah.]</p>
       </details>
     </section>
 
-    <section id="contact">
+    <!-- The contact band and the footer after <main> share the navy
+         background, so they read as one band -->
+    <section id="contact" class="band contact">
       <h2>Say hello</h2>
       <p>Questions about a commission? Email me, or find me here.</p>
-      <a href="#">[Placeholder: Sarah's email]</a>
-      <ul>
-        <li><a href="#">Email</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Etsy shop</a></li>
+      <a class="band-email" href="#">[Placeholder: Sarah's email]</a>
+      <ul class="band-links" role="list">
+        <li>
+          <a class="btn btn-primary" href="#">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            Email
+          </a>
+        </li>
+        <li>
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg>
+            Instagram<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            Etsy shop<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Sarah Rose Costa</p>
-    <a href="#top">Back to top</a>
+  <footer class="band site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Sarah Rose Costa</p>
+      <a href="#top">Back to top</a>
+    </div>
   </footer>
 
   <!-- Lightbox, filled and opened by js/lightbox.js. data-shop-url is where
