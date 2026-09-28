@@ -33,7 +33,7 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 
 - The v1 site (single index.html, green/purple, Playfair + Lora) was removed on Sept 27, 2026. It's in git history at commit 4bfa10f.
 - Stack confirmed: plain HTML, CSS and vanilla JS.
-- Milestones 1–10 done: every section is built, styled and animated. Next: milestone 11 (responsive pass) in `docs/SPEC.md` → Build order.
+- Milestones 1–11 done: every section is built, styled, animated and checked from 320 to 1600 px. Next: milestone 12 (accessibility pass) in `docs/SPEC.md` → Build order.
 - The lightbox is opened with `openLightbox(pieces, index, openerElement)`; personal pieces are `{ file, alt, title, label: 'Personal', tint: 'var(--tint-personal)', year }` with no `offerings`.
 - Filtering sets `hidden` on gallery `<li>`s; the lightbox's list is the tiles that aren't hidden.
 - Images point at their final paths from the spec before the files exist; the group tint shows until Sarah's images are dropped in.

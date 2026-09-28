@@ -137,7 +137,7 @@ The hero has no id on purpose. The wordmark and "Back to top" link to `#top`, an
 | Range | Name | What changes |
 | --- | --- | --- |
 | < 640 px | Phone | The phone mockup: one column, 20 px gutters, 2-column grid, menu button instead of links |
-| 640–1023 px | Tablet | Not designed. Keep the phone layout, but use a 3-column grid, 40 px gutters, and show the nav links once they fit (about 820 px) |
+| 640–1023 px | Tablet | Not designed. Keep the phone layout, but use a 3-column grid, 40 px gutters, filter chips that wrap and centre instead of scrolling, and show the nav links once they fit (from 820 px) |
 | ≥ 1024 px | Desktop | The desktop mockup: two-column hero and About card, 4-column grid |
 | > 1280 px | Wide | Content stops at 1280 px and centres. The navy contact band still runs full width |
 
@@ -433,7 +433,7 @@ Nothing here blocks starting the build: placeholders cover every missing piece o
 - [x] Logo lightbox in Warm Sketchbook style: two package cards (Logo Design, Logo Suite), each with price, note and button (built as compact rows: name, price and note left, a "Commission" button right whose hidden text names the package)
 - [x] Personal-piece lightbox: title and year, no button
 - [x] Phone menu panel (built as suggested under Components: card panel under the header, 56 px rows, 20 px text)
-- [ ] Tablet layout (described in words above; check it during the build)
+- [x] Tablet layout (described in words above; checked in the milestone 11 responsive pass)
 - [x] Hover states for buttons and chips (built as described in States and interactions)
 
 **Content from Sarah (blocks launch)**
@@ -472,7 +472,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion
 - [x] 9. About card, FAQ with `<details>`, contact band, footer
 - [x] 10. Motion pass, including reduced motion
-- [ ] 11. Responsive pass at 320, 390, 768, 1024, 1280 and 1600 px
+- [x] 11. Responsive pass at 320, 390, 768, 1024, 1280 and 1600 px
 - [ ] 12. Accessibility pass: keyboard only, a screen reader, Lighthouse
 - [ ] 13. Real content and images from Sarah; alt text; check every Etsy link
 - [ ] 14. Open Graph image and tags, favicon, performance check, custom domain and HTTPS, launch

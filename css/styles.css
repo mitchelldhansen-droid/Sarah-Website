@@ -252,8 +252,8 @@ section {
   gap: var(--space-5);
 }
 
-/* Filter chips: one sideways-scrolling row on phones and tablets, running
-   to the screen edges. The block padding leaves room for the focus ring,
+/* Filter chips: one sideways-scrolling row on phones, running to the
+   screen edges; they wrap from 640 px. The block padding leaves room for the focus ring,
    which a scrolling box would otherwise clip. */
 .filters {
   display: flex;
@@ -422,6 +422,15 @@ section {
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  /* Tablets and up have room to wrap the chips instead of scrolling */
+  .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow-x: visible;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -431,14 +440,6 @@ section {
 
   .gallery-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .filters {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-inline: 0;
-    padding-inline: 0;
-    overflow-x: visible;
   }
 
   .chip {
@@ -1041,13 +1042,23 @@ section {
   border-bottom-color: var(--color-border-soft);
 }
 
+/* min-height makes the whole 44 px band tappable, not just the text */
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   margin-right: auto;
   font-family: var(--font-display);
   font-size: var(--text-wordmark);
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
+}
+
+/* flex-shrink: 0 stops a wrapping wordmark squeezing the buttons below 44 px */
+.menu-button,
+.shop-link {
+  flex-shrink: 0;
 }
 
 .menu-button {
@@ -1134,7 +1145,10 @@ section {
     gap: var(--space-6);
   }
 
+  /* min-width keeps short links like "FAQ" at least 44 px wide */
   .site-nav a {
+    justify-content: center;
+    min-width: 44px;
     min-height: 44px;
     font-size: var(--text-ui);
   }
