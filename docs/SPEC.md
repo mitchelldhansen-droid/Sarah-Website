@@ -180,7 +180,7 @@ Every interactive element gets the same visible focus ring: a 2 px teal outline 
 | Outline button | Hover | Fills with ink; text turns paper |
 | Filter chip | Hover | Border turns ink |
 | Filter chip | Selected | Ink fill, paper text, `aria-pressed="true"`. Exactly one chip is selected; "All" on page load |
-| Filter chip | Click | Grid shows only that group. The page doesn't jump. A hidden live region announces the result, for example "Showing 4 pet pieces" |
+| Filter chip | Click | Grid shows only that group. The page doesn't jump. A hidden live region announces the result: "Showing 4 pieces in Pets", or "Showing all 12 pieces" for All |
 | Gallery tile | Hover or keyboard focus (desktop) | Lifts 6 px, gains `--shadow-lift`, caption bar slides up from the bottom edge |
 | Gallery tile | Click, Enter or Space | Opens the lightbox on that piece |
 | Lightbox | Open | Page behind stops scrolling. Focus moves to the close button. Title is announced |
@@ -466,7 +466,7 @@ Build the static page first, then add one interactive piece at a time. Each mile
 - [x] 3. Header: sticky, anchor links, scrolled border, phone menu
 - [x] 4. Hero: text, the two buttons, art cluster with placeholder images
 - [x] 5. Data files (the real seven offerings, placeholder gallery entries) and `gallery.js` drawing the tiles
-- [ ] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement
+- [x] 6. Filter chips: computed starting prices, `aria-pressed`, live-region announcement
 - [ ] 7. Lightbox on `<dialog>`: commission, logo and personal variants; keyboard, swipe, focus return
 - [ ] 8. Carousel: scroll snapping, arrows, autoplay rules, reduced motion
 - [ ] 9. About card, FAQ with `<details>`, contact band, footer

@@ -60,11 +60,13 @@
         <h2>Commission gallery</h2>
         <p>Choose any piece to see it larger, then commission your own in that style.</p>
       </div>
-      <!-- Filter chips: milestone 6 -->
-
-      <!-- Tiles are drawn here by js/gallery.js. role="list" keeps the list
-           announced in Safari, which drops it when list-style is none. -->
+      <!-- Chips and tiles are drawn by js/gallery.js. role="list" keeps the
+           list announced in Safari, which drops it when list-style is none. -->
+      <div class="filters" role="group" aria-label="Filter by style"></div>
       <ul class="gallery-grid" role="list"></ul>
+      <!-- Must be on the page, empty, before its text changes, or screen
+           readers won't announce it -->
+      <p class="visually-hidden" id="gallery-status" aria-live="polite"></p>
 
       <p class="gallery-message" id="gallery-error" hidden>The gallery didn't load. Please refresh, or <a href="#" target="_blank" rel="noopener" aria-label="visit the Etsy shop (opens in a new tab)">visit the Etsy shop</a>.</p>
       <noscript>
