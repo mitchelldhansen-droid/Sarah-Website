@@ -66,4 +66,5 @@ The site is published with GitHub Pages from the `main` branch. Pushing to `main
 - `docs/SPEC.md` — build spec and milestone list
 - `docs/BRIEF.md` — decisions and content still needed from Sarah
 - `docs/design/` — design mockups
+- `docs/BROWSER-TESTING.md` — what to check in Firefox and on an iPhone
 - `CHANGELOG.md` — what changed and when
