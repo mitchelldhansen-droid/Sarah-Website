@@ -43,7 +43,7 @@ One site that works as both Sarah's portfolio and her shop front. Etsy handles a
 
 - [ ] One-line description for each offering
 - [ ] Etsy listing link for each offering, plus the main shop link
-- [ ] Commission example images, 3–6 per offering, each tagged with its offering
+- [ ] Commission example images, 1 or 2 per offering depending on what she has (Mitchell, Sept 28, 2026; was 3–6), each tagged with its offering
 - [ ] 5–10 personal pieces with titles and years
 - [ ] Three hero pieces and an About photo (or self-portrait)
 - [ ] Intro line, About text (3–5 sentences in her voice), FAQ answers
