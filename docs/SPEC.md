@@ -460,7 +460,7 @@ Mitchell can draft the alt text for Sarah to check.
 **Decisions to confirm**
 
 - [x] Stack: plain HTML, CSS and JavaScript (confirmed Sept 27, 2026)
-- [ ] Name on the site: "Sarah Rose Costa"
+- [ ] Name on the site: "Sarah Rose Costa" in the header, her brand in the contact band, footer and About (Mitchell's pick, Nov 12, 2026; waiting on Sarah's OK and the brand's spelling; see BRIEF → Decisions)
 - [x] Etsy links open in a new tab (Sept 27, 2026)
 - [ ] Carousel autoplays every 6 seconds by default
 - [ ] Hero subline still reads "Browse the gallery, find a style you love…" now that the buttons are Work with me and Visit the Etsy shop

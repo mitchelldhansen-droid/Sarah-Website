@@ -94,7 +94,7 @@ def check_page():
             report(todos, f'index.html line {number}', f'placeholder: {short}')
     empty_links = html.count('href="#"')
     if empty_links:
-        report(todos, 'index.html', f'{empty_links} links still go nowhere (href="#"): Etsy shop, email, Instagram')
+        report(todos, 'index.html', f'{empty_links} links still go nowhere (href="#")')
     check_images('index.html', [Path(path) for path in sorted(set(re.findall(r'images/[\w/.-]+', html)))])
 
 

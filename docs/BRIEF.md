@@ -1,10 +1,12 @@
 # Sarah's Portfolio Site — Brief
 
-Decisions made with Sarah on Sept 26, 2026. The live brief on claude.ai is where Sarah fills in her content; copy answers into `data/` and this file as they arrive.
+Decisions made with Sarah on Sept 26, 2026. Sarah sends her content (images, and her words in a Google Doc) through a shared Google Drive folder, which Mitchell downloads as a zip (since Nov 12, 2026; the live brief on claude.ai is no longer used for content). Copy answers into `data/` and this file as they arrive.
 
 ## What the site is
 
 One site that works as both Sarah's portfolio and her shop front. Etsy handles all sales; the site's job is to show the work and send buyers to the right listing.
+
+It has a second audience too (Sarah, Nov 12, 2026): **employers hiring her for freelance work**, so it's also the link she sends with job applications.
 
 ## Decisions
 
@@ -25,6 +27,7 @@ One site that works as both Sarah's portfolio and her shop front. Etsy handles a
 | Fonts | Fraunces (headings) + Nunito (body). Whimsical and simpler pairings were compared and passed on |
 | Colours | Deep teal #2F6B5E for buttons and accents (orange was dropped); cream #F5EEE3; cards #FFFBF5; navy ink #2A2F45 |
 | Intro buttons | "Work with me" scrolls to About; "Visit the Etsy shop" opens Etsy |
+| Name and brand | Proposed Nov 12, 2026 (Mitchell chose; waiting on Sarah's OK): her name, **Sarah Rose Costa**, leads in the header, because employers hire a person. Her brand (Etsy shop and Instagram, both `costaandcraftsstudio`) appears where people shop and follow: the contact band, the footer and a line in About. Not written into the site until she confirms how she spells it ("Costa and Crafts Studio" or "Costa & Crafts Studio") |
 | Taste references | communecalla.com and jessvossart.com. Sarah likes: consistent art size, hover effects and the lightbox feel, consistent fonts, direct shops, smooth animations, elegant simple styling |
 
 ## Offerings
@@ -42,19 +45,20 @@ One site that works as both Sarah's portfolio and her shop front. Etsy handles a
 ## Content still needed from Sarah
 
 - [ ] One-line description for each offering
-- [ ] Etsy listing link for each offering, plus the main shop link
+- [ ] Etsy listing link for each offering (she'll add them once the listings are up). The main shop link is in (Nov 12, 2026): `https://www.etsy.com/shop/costaandcraftsstudio`, built from her handle, so click it to check before launch.
 - [ ] Commission example images, 1 or 2 per offering depending on what she has (Mitchell, Sept 28, 2026; was 3–6), each tagged with its offering. **Partly in (Nov 12, 2026):** 8 pieces are in the gallery: solo 1, duo 2 (her `duo-portrait_04` and `_06`, of 6 sent), animal face 2 (her `pet_face_01` and `_02`, of 3), full body 1, custom 2. **Still needed: logo examples** (until then the Logos chip is hidden), and a second solo and full-body piece if she has them. File names keep her numbers; only `pet_face`, `pet_fullbody` and `custom_commission` were renamed to the offering ids.
 - [ ] Sarah to approve the thumbnail crops (most are a full-width square centred on the subject; Buddy, `animal-face_02`, has white added above and below instead of a crop, so his name and ears stay in)
 - [ ] 5–10 personal pieces with titles and years
-- [ ] Three hero pieces and an About photo (or self-portrait). **Heroes 1 and 3 are in (Nov 12, 2026).** Hero 2 is held back: it's the same piece as gallery `custom-commission_01`, but its caption has different names and a different date from her gallery version. About photo still needed.
+- [ ] Three hero pieces and an About photo (or self-portrait). **Heroes 1 and 3 are in (Nov 12, 2026).** Hero 2 is held back: it's the same piece as gallery `custom-commission_01`, but its caption has different names and a different date from her gallery version. Sarah's answer (Nov 12, 2026): use the version with the gallery's names in both places. She'll fix the "Yosmite" typo and re-send both the hero and `custom-commission_01`. About photo still needed.
 
-**Questions for Sarah (from her Nov 2 image folder):**
+**Answers and open questions from Sarah (Nov 12, 2026):**
 
-- Hero 2: is its caption OK to publish, or can she re-export it to match the gallery version? Both versions spell "Yosmite"; does she want that fixed?
-- Her `people/`, `pets/` and `objects/` folders: which, if any, are personal work for the carousel (with titles and years)? Candidates not already in the gallery: `couple_custom_painting`, `mothers day copy`, `cutenudesprint5x7` (is this one meant for the site?), `mitchell.jpg` (what is it?), `bubba_the_bard`, `raylan`, `rosie4x4`, and the fig, "I love you mom" and angel wings designs.
+- Her `people/`, `pets/` and `objects/` folders weren't meant to be sent. Use nothing from them; she'll send edited, cropped versions.
+- She may send her Costa and Crafts logo, though she's unsure she still likes it. If she keeps it, it could be a logo example.
+- Still open: approval of the thumbnail crops, how she spells her brand, all the wording, and whether the contact section should say she's open to freelance work.
 - A larger export of `duo-portrait_02` (it's 1200 px; the lightbox wants 1400) if she'd like it in the gallery later.
 - [ ] Intro line, About text (3–5 sentences in her voice), FAQ answers
-- [ ] Contact email and Instagram handle
+- [ ] Contact email. Instagram is in (Nov 12, 2026): `https://www.instagram.com/costaandcraftsstudio/`, built from her handle, so click it to check before launch.
 - [ ] Domain name
 
 ## Drafts in the site: Sarah to rewrite or approve
