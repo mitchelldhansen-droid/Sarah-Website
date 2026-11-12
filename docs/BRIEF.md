@@ -21,12 +21,13 @@ It has a second audience too (Sarah, Nov 12, 2026): **employers hiring her for f
 | Pieces that aren't an offering | No button. They go in the personal work carousel |
 | Carousel | Swipe, arrows, and slow autoplay with a pause button |
 | Etsy links | One link per offering, stored in one place (`data/offerings.json`) |
+| First launch without Etsy listings | Mitchell, Nov 12, 2026: her shop is up but has no listings yet, so for now commissions are by email. The header button reads "Commission me" ("Commission" on phones) and the hero's second button "Commission a piece"; both scroll to the contact section. An offering with no Etsy link keeps its "Commission this style" button, which closes the lightbox and goes to the contact section, with the note "Etsy listings are coming soon. For now, commission me by email." Adding an offering's `etsyUrl` switches its button back to Etsy with no code change. The hero subline, contact text and FAQ say the same. When listings are up, put the header and hero buttons back to "Shop on Etsy" / "Visit the Etsy shop" and the Etsy wording back into the FAQ |
 | Contact | Email and social links as icons. No contact form |
 | Tutoring | Removed. Etsy doesn't allow tutoring listings |
 | Look | Warm Sketchbook: cream paper background, rounded tiles and pill buttons, wavy-line divider, navy contact band |
 | Fonts | Fraunces (headings) + Nunito (body). Whimsical and simpler pairings were compared and passed on |
 | Colours | Deep teal #2F6B5E for buttons and accents (orange was dropped); cream #F5EEE3; cards #FFFBF5; navy ink #2A2F45 |
-| Intro buttons | "Work with me" scrolls to About; "Visit the Etsy shop" opens Etsy |
+| Intro buttons | "Work with me" scrolls to About; "Visit the Etsy shop" opens Etsy (for now "Commission a piece", which scrolls to the contact section; see "First launch without Etsy listings") |
 | Name and brand | Proposed Nov 12, 2026 (Mitchell chose; waiting on Sarah's OK): her name, **Sarah Rose Costa**, leads in the header, because employers hire a person. Her brand (Etsy shop and Instagram, both `costaandcraftsstudio`) appears where people shop and follow: the contact band, the footer and a line in About. Not written into the site until she confirms how she spells it ("Costa and Crafts Studio" or "Costa & Crafts Studio") |
 | Taste references | communecalla.com and jessvossart.com. Sarah likes: consistent art size, hover effects and the lightbox feel, consistent fonts, direct shops, smooth animations, elegant simple styling |
 
@@ -45,7 +46,8 @@ It has a second audience too (Sarah, Nov 12, 2026): **employers hiring her for f
 ## Content still needed from Sarah
 
 - [ ] One-line description for each offering
-- [ ] Etsy listing link for each offering (she'll add them once the listings are up). The main shop link is in (Nov 12, 2026): `https://www.etsy.com/shop/costaandcraftsstudio`, built from her handle, so click it to check before launch.
+- [x] Main Etsy shop link (Nov 12, 2026): `https://www.etsy.com/shop/costaandcraftsstudio`. Mitchell clicked it and it works.
+- [ ] Etsy listing link for each offering. **Not needed for the first launch** (commissions are by email until then); add each one to `offerings.json` once her listings are up.
 - [ ] Commission example images, 1 or 2 per offering depending on what she has (Mitchell, Sept 28, 2026; was 3–6), each tagged with its offering. **Partly in (Nov 12, 2026):** 8 pieces are in the gallery: solo 1, duo 2 (her `duo-portrait_04` and `_06`, of 6 sent), animal face 2 (her `pet_face_01` and `_02`, of 3), full body 1, custom 2. **Still needed: logo examples** (until then the Logos chip is hidden), and a second solo and full-body piece if she has them. File names keep her numbers; only `pet_face`, `pet_fullbody` and `custom_commission` were renamed to the offering ids.
 - [ ] Sarah to approve the thumbnail crops (most are a full-width square centred on the subject; Buddy, `animal-face_02`, has white added above and below instead of a crop, so his name and ears stay in)
 - [ ] 5–10 personal pieces with titles and years
@@ -58,7 +60,8 @@ It has a second audience too (Sarah, Nov 12, 2026): **employers hiring her for f
 - Still open: approval of the thumbnail crops, how she spells her brand, all the wording, and whether the contact section should say she's open to freelance work.
 - A larger export of `duo-portrait_02` (it's 1200 px; the lightbox wants 1400) if she'd like it in the gallery later.
 - [ ] Intro line, About text (3–5 sentences in her voice), FAQ answers
-- [ ] Contact email. Instagram is in (Nov 12, 2026): `https://www.instagram.com/costaandcraftsstudio/`, built from her handle, so click it to check before launch.
+- [x] Contact email and Instagram (Nov 12, 2026): `sarahrose137@gmail.com` (from Mitchell) and `https://www.instagram.com/costaandcraftsstudio/` (clicked, works).
+- [ ] How and when buyers pay for an email commission. This is a new FAQ placeholder, needed now that commissions don't go through Etsy.
 - [ ] Domain name
 
 ## Drafts in the site: Sarah to rewrite or approve

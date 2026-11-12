@@ -2,6 +2,8 @@
 
 A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors browse commission examples, open a piece in a lightbox, and click through to the matching Etsy listing. Etsy handles all sales; the site has no cart, no forms and no backend.
 
+**For the first launch, commissions are by email** (Mitchell, Nov 12, 2026): her Etsy shop exists but has no listings. Offerings without an `etsyUrl` send people to the contact section, and the header and hero buttons say "Commission". Don't put the Etsy wording back until Mitchell says the listings are up; `docs/BRIEF.md` → Decisions → "First launch without Etsy listings" lists exactly what to change back.
+
 ## Read before working
 
 - `docs/SPEC.md` — the build spec: tokens, layout, components, interactions, data shapes, accessibility, and the **Build order** milestone list. Read the sections that apply to the current task; don't load the whole file unless needed.
@@ -49,7 +51,7 @@ A one-page portfolio and shop front for illustrator Sarah Rose Costa. Visitors b
 ## Where we left off (Sept 28, 2026)
 
 1. **Mitchell to run `docs/BROWSER-TESTING.md`** on Firefox and an iPhone. Failures come back as "browser + step number"; fix them one at a time.
-2. **Waiting on Sarah** for the items in `docs/BRIEF.md` → "Content still needed" and "Drafts in the site". When they arrive, milestone 13 resumes: exports into `originals/`, run `py tools/prepare_images.py`, fill in the text and links, draft alt text (patterns in BRIEF), then run `py tools/check_content.py` until it's clear, and click every Etsy link by hand.
+2. **Waiting on Sarah** for the items in `docs/BRIEF.md` → "Content still needed" and "Drafts in the site". When they arrive, milestone 13 resumes: exports into `originals/`, run `py tools/prepare_images.py`, fill in the text and links, draft alt text (patterns in BRIEF), then run `py tools/check_content.py` until it's clear, and click every link by hand.
 3. **Then the rest of milestone 14:** `images/og.jpg` (1200 × 630, from her art), Lighthouse with real images, the custom domain (swap the address in `<head>`), Enforce HTTPS, launch.
 4. Not yet decided (SPEC → Open items → Decisions to confirm): the name on the site, whether the carousel autoplays, and the hero subline wording. These need Sarah.
 

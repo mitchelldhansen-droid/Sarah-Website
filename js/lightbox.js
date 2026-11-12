@@ -144,7 +144,9 @@ function buildActions(offerings) {
 
   if (offerings.length === 1) {
     const [offering] = offerings;
-    const note = offering.etsyUrl ? 'Opens the listing on Etsy' : 'Opens my Etsy shop';
+    const note = offering.etsyUrl
+      ? 'Opens the listing on Etsy'
+      : 'Etsy listings are coming soon. For now, commission me by email.';
     return [etsyButton(offering, 'Commission this style', ''), make('p', 'lightbox-note', note)];
   }
 
@@ -172,10 +174,26 @@ function etsyButton(offering, label, hiddenName) {
     visible.textContent = label;
     hidden.textContent = `${hiddenName} (opens Etsy in a new tab)`;
   } else {
-    // No listing link yet: send people to the shop rather than a dead end
-    button.href = dialog.dataset.shopUrl;
-    visible.textContent = 'Visit the Etsy shop';
-    hidden.textContent = ' (opens in a new tab)';
+    // No listing link yet: send people to the contact section to commission
+    // by email. Adding etsyUrl to offerings.json switches it back to Etsy.
+    button.href = '#contact';
+    button.removeAttribute('target');
+    button.removeAttribute('rel');
+    button.querySelector('svg').remove(); // the ↗ arrow means "opens another site"
+    visible.textContent = label;
+    hidden.textContent = hiddenName;
+    button.addEventListener('click', goToContact);
   }
   return button;
+}
+
+// Closes the lightbox and moves to the contact section. Focus goes to the
+// email link, not back to the tile, so keyboard and screen reader users
+// land where the button said they would.
+function goToContact(event) {
+  event.preventDefault();
+  opener = null; // stops the close handler sending focus back to the tile
+  dialog.close();
+  document.getElementById('contact').scrollIntoView();
+  document.querySelector('.band-email').focus({ preventScroll: true });
 }

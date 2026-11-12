@@ -310,15 +310,15 @@ Use WebP at about 80% quality; `tools/prepare_images.py` makes all of these exce
 
 ## Edge cases
 
-The rule of thumb: when something is missing, fall back to the Etsy shop rather than a dead end, because the site's whole job is getting people there.
+The rule of thumb: when something is missing, fall back to a way to reach Sarah rather than a dead end, because the site's whole job is getting people to commission her. Until her Etsy listings exist, that's the contact section (email); see BRIEF → "First launch without Etsy listings", which also changes the header and hero buttons.
 
 | Case | What happens |
 | --- | --- |
 | Image still loading | The tile shows its group tint, then the image fades in (200 ms; instant with reduced motion). Every `<img>` has `width` and `height` set, so the layout doesn't jump when it arrives |
 | Slow connection | Below-the-fold images use `loading="lazy"`. Full-size images load only when the lightbox opens, and the lightbox preloads the next and previous ones. Phones get the 800 px version via `srcset` |
-| Data file fails to load (bad JSON, or opened without a local server) | The gallery area shows "The gallery didn't load. Please refresh, or visit the Etsy shop." with a link. The error is logged to the console |
-| JavaScript turned off | Hero, About, FAQ and contact still work. A `<noscript>` message in the gallery links to the Etsy shop |
-| Offering has no Etsy link yet | Its button reads "Visit the Etsy shop" and links to the main shop page |
+| Data file fails to load (bad JSON, or opened without a local server) | The gallery area shows "The gallery didn't load. Please refresh, or see my work on Instagram." with a link. The error is logged to the console |
+| JavaScript turned off | Hero, About, FAQ and contact still work. A `<noscript>` message in the gallery links to Instagram |
+| Offering has no Etsy link yet | Its button still reads "Commission this style" (logo packages: "Commission"), opens in the same tab, closes the lightbox, scrolls to the contact section and focuses the email link. The note under it reads "Etsy listings are coming soon. For now, commission me by email." |
 | Image file missing | The tile keeps its tint and shows the offering name, like the mockup placeholder. A console warning names the file |
 | Alt text missing | Falls back to "Example of [offering name]" |
 | A group has no pieces | Its filter chip is hidden |
@@ -463,7 +463,7 @@ Mitchell can draft the alt text for Sarah to check.
 - [ ] Name on the site: "Sarah Rose Costa" in the header, her brand in the contact band, footer and About (Mitchell's pick, Nov 12, 2026; waiting on Sarah's OK and the brand's spelling; see BRIEF → Decisions)
 - [x] Etsy links open in a new tab (Sept 27, 2026)
 - [ ] Carousel autoplays every 6 seconds by default
-- [ ] Hero subline still reads "Browse the gallery, find a style you love…" now that the buttons are Work with me and Visit the Etsy shop
+- [ ] Hero subline still reads "Browse the gallery, find a style you love…" now that the buttons are Work with me and Visit the Etsy shop (for the first launch it reads "…and email me to commission your own. Etsy listings are coming soon.")
 
 ## Build order
 

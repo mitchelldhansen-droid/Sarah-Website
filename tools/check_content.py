@@ -4,7 +4,9 @@ Run from the repo root:  py tools/check_content.py
 
 Errors mean something on the page is wrong right now. "Before launch" lists
 content still to come. It only reads files; nothing is changed. It doesn't
-visit the Etsy links (Etsy blocks scripts), so click each one before launch.
+visit any links (Etsy blocks scripts), so click each one before launch.
+Offerings may launch without Etsy links: their buttons go to the contact
+section until a listing link is added.
 """
 import json
 import re
@@ -61,10 +63,10 @@ def check_offerings(data):
         if offering['group'] not in group_ids:
             report(errors, where, f"group '{offering['group']}' isn't in groups")
         check_text(where, offering, ['name', 'description'])
+        # A blank link is fine: the button sends people to the contact section
+        # to commission by email until the Etsy listing exists
         url = offering['etsyUrl']
-        if not url:
-            report(todos, where, 'no Etsy link (the button goes to the shop instead)')
-        elif not url.startswith('https://www.etsy.com/'):
+        if url and not url.startswith('https://www.etsy.com/'):
             report(errors, where, f"Etsy link doesn't start with https://www.etsy.com/: {url}")
     return {offering['id'] for offering in data['offerings']}
 
@@ -114,7 +116,7 @@ def main():
     print_group('Errors (the page is wrong now):', errors)
     print_group('Before launch:', todos)
     count = sum(len(problems) for problems in [*errors.values(), *todos.values()])
-    print(f'\n{count} to fix.' if count else 'All clear: ready to launch (after clicking every Etsy link).')
+    print(f'\n{count} to fix.' if count else 'All clear: ready to launch (after clicking every link).')
     sys.exit(1 if count else 0)
 
 

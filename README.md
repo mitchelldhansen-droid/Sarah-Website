@@ -1,6 +1,6 @@
 # Sarah Rose Costa — portfolio site
 
-A one-page portfolio and shop front for illustrator Sarah Rose Costa. Commissions are ordered through her Etsy shop.
+A one-page portfolio and shop front for illustrator Sarah Rose Costa. Commissions are ordered by email for now, and through her Etsy shop once her listings are up.
 
 **Status:** being rebuilt (version 2). The plan is in `docs/SPEC.md`.
 
@@ -55,7 +55,7 @@ The hero pieces and About photo go through the same script; the top of `tools/pr
 py tools/check_content.py
 ```
 
-It lists anything wrong in the data files (an offering id with a typo, a file name used twice, a link that isn't an Etsy address) and everything still to come: blank Etsy links and alt text, missing images, `[bracketed]` placeholders, links that go nowhere and text over the spec's length limits. It changes nothing. It can't visit the Etsy links (Etsy blocks scripts), so click each one yourself before launch.
+It lists anything wrong in the data files (an offering id with a typo, a file name used twice, a link that isn't an Etsy address) and everything still to come: blank alt text, missing images, `[bracketed]` placeholders, links that go nowhere and text over the spec's length limits. It changes nothing. It can't visit the Etsy links (Etsy blocks scripts), so click each one yourself before launch.
 
 ## Deploy
 

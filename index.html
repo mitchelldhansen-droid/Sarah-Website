@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sarah Rose Costa, Illustrator · Custom portraits, pet portraits &amp; logos</title>
-  <meta name="description" content="Custom portraits, pet portraits and logos by illustrator Sarah Rose Costa. Browse examples and commission your own on Etsy.">
+  <meta name="description" content="Custom portraits, pet portraits and logos by illustrator Sarah Rose Costa. Browse examples and commission your own by email.">
   <!-- The site's address appears 3 times below: swap it for the custom domain at launch -->
   <link rel="canonical" href="https://mitchelldhansen-droid.github.io/Sarah-Website/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mitchelldhansen-droid.github.io/Sarah-Website/">
   <meta property="og:title" content="Sarah Rose Costa, Illustrator">
-  <meta property="og:description" content="Custom portraits, pet portraits and logos by illustrator Sarah Rose Costa. Browse examples and commission your own on Etsy.">
+  <meta property="og:description" content="Custom portraits, pet portraits and logos by illustrator Sarah Rose Costa. Browse examples and commission your own by email.">
   <meta property="og:image" content="https://mitchelldhansen-droid.github.io/Sarah-Website/images/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -39,9 +39,11 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary shop-link" href="https://www.etsy.com/shop/costaandcraftsstudio" target="_blank" rel="noopener" aria-label="Shop on Etsy (opens in a new tab)">
-      <svg class="shop-extra" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
-      <span>Shop<span class="shop-extra"> on Etsy</span></span>
+    <!-- Commissions are by email until Sarah's Etsy listings are up; then
+         this goes back to "Shop on Etsy" (the shop-link classes stay for that) -->
+    <a class="btn btn-primary shop-link" href="#contact">
+      <svg class="shop-extra" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      <span>Commission<span class="shop-extra"> me</span></span>
     </a>
   </header>
 
@@ -51,10 +53,10 @@
       <div class="hero-text">
         <p class="eyebrow">Illustrator &amp; designer</p>
         <h1>Portraits, pet portraits &amp; logos, made to order</h1>
-        <p class="hero-lead">Browse the gallery, find a style you love, and commission your own through my Etsy shop.</p>
+        <p class="hero-lead">Browse the gallery, find a style you love, and email me to commission your own. Etsy listings are coming soon.</p>
         <div class="hero-buttons">
           <a class="btn btn-primary" href="#about">Work with me</a>
-          <a class="btn btn-outline" href="https://www.etsy.com/shop/costaandcraftsstudio" target="_blank" rel="noopener" aria-label="Visit the Etsy shop (opens in a new tab)">Visit the Etsy shop</a>
+          <a class="btn btn-outline" href="#contact">Commission a piece</a>
         </div>
       </div>
       <!-- Decorative: the same pieces are in the gallery with full alt text -->
@@ -78,9 +80,9 @@
            readers won't announce it -->
       <p class="visually-hidden" id="gallery-status" aria-live="polite"></p>
 
-      <p class="gallery-message" id="gallery-error" hidden>The gallery didn't load. Please refresh, or <a href="https://www.etsy.com/shop/costaandcraftsstudio" target="_blank" rel="noopener" aria-label="visit the Etsy shop (opens in a new tab)">visit the Etsy shop</a>.</p>
+      <p class="gallery-message" id="gallery-error" hidden>The gallery didn't load. Please refresh, or <a href="https://www.instagram.com/costaandcraftsstudio/" target="_blank" rel="noopener" aria-label="see my work on Instagram (opens in a new tab)">see my work on Instagram</a>.</p>
       <noscript>
-        <p class="gallery-message">The gallery needs JavaScript to show. You can browse my work on <a href="https://www.etsy.com/shop/costaandcraftsstudio" target="_blank" rel="noopener" aria-label="my Etsy shop (opens in a new tab)">my Etsy shop</a>.</p>
+        <p class="gallery-message">The gallery needs JavaScript to show. You can see my work on <a href="https://www.instagram.com/costaandcraftsstudio/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">Instagram</a>.</p>
       </noscript>
 
       <template id="tile-template">
@@ -168,7 +170,7 @@
       <h2>Good to know</h2>
       <details open>
         <summary>How does ordering a commission work?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
-        <p>Pick a style you love in the gallery, then click through to its Etsy listing and place your order there. Etsy takes care of payment, and we'll keep in touch through Etsy messages. Once you've ordered, send me your photos and any details you'd like included. [I'll share a sketch for you to check before I finish.] Then I'll deliver your piece [how].</p>
+        <p>Pick a style you love in the gallery, then email me with what you'd like. My Etsy listings are coming soon; for now, commissions are arranged by email. Send me your photos and any details you'd like included, and we'll agree the price together. [How and when you pay.] [I'll share a sketch for you to check before I finish.] Then I'll deliver your piece [how].</p>
       </details>
       <details>
         <summary>What do I need to send you?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
@@ -176,7 +178,7 @@
       </details>
       <details>
         <summary>How long does a commission take?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
-        <p>Most portraits take about [X] weeks from when I have your photos, and logos about [X] weeks. Etsy shows my current processing time on each listing. If you need your piece by a certain date, like a birthday, message me before you order and I'll let you know whether I can make it.</p>
+        <p>Most portraits take about [X] weeks from when I have your photos, and logos about [X] weeks. If you need your piece by a certain date, like a birthday, tell me when you email and I'll let you know whether I can make it.</p>
       </details>
       <details>
         <summary>How many revisions are included?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
@@ -184,15 +186,15 @@
       </details>
       <details>
         <summary>Will I get a physical piece or a digital file?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
-        <p>Each Etsy listing says exactly what you'll receive. [Portraits come as a high-resolution digital file, ready to print at home or with a print shop.] Logos come as digital files for both print and screen, [in PNG, SVG and PDF].</p>
+        <p>I'll confirm exactly what you'll receive before I start. [Portraits come as a high-resolution digital file, ready to print at home or with a print shop.] Logos come as digital files for both print and screen, [in PNG, SVG and PDF].</p>
       </details>
       <details>
         <summary>Do you ship?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
-        <p>[Digital pieces are delivered through Etsy, so there's nothing to ship.] [If you order a physical piece, I ship within [country] and internationally.] Shipping costs, if any, are shown at checkout on Etsy.</p>
+        <p>[Digital pieces are delivered by email, so there's nothing to ship.] [If you order a physical piece, I ship within [country] and internationally.] If there's a shipping cost, I'll tell you before you pay.</p>
       </details>
       <details>
         <summary>Can I request something that isn't listed?<span class="faq-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="faq-plus" d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary>
-        <p>Yes! If your idea doesn't fit one of my listings, that's what the Custom Commission is for. Message me on Etsy or send me an email with what you have in mind, and we'll agree the details and price together before you order.</p>
+        <p>Yes! If your idea doesn't fit one of my offerings, that's what the Custom Commission is for. Email me with what you have in mind, and we'll agree the details and price together before I start.</p>
       </details>
     </section>
 
@@ -200,11 +202,11 @@
          background, so they read as one band -->
     <section id="contact" class="band contact">
       <h2>Say hello</h2>
-      <p>Questions about a commission? Email me, or find me here.</p>
-      <a class="band-email" href="#">[Placeholder: Sarah's email]</a>
+      <p>To commission a piece or ask a question, email me. Etsy listings are coming soon.</p>
+      <a class="band-email" href="mailto:sarahrose137@gmail.com">sarahrose137@gmail.com</a>
       <ul class="band-links" role="list">
         <li>
-          <a class="btn btn-primary" href="#">
+          <a class="btn btn-primary" href="mailto:sarahrose137@gmail.com">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
             Email
           </a>
@@ -232,9 +234,9 @@
     </div>
   </footer>
 
-  <!-- Lightbox, filled and opened by js/lightbox.js. data-shop-url is where
-       Etsy buttons go when an offering has no listing link yet. -->
-  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title" data-shop-url="https://www.etsy.com/shop/costaandcraftsstudio">
+  <!-- Lightbox, filled and opened by js/lightbox.js. An offering with no Etsy
+       listing link yet sends its button to the contact section instead. -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
     <div class="lightbox-panel">
       <button class="lightbox-close" type="button" aria-label="Close" autofocus>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>

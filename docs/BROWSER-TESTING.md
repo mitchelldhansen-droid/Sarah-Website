@@ -25,7 +25,7 @@ Every milestone so far was checked in Chrome. This list covers the places where 
 - [ ] 10. Try to scroll the page with the mouse wheel while the lightbox is open: the page behind doesn't move.
 - [ ] 11. Press the right and left arrow keys: the piece changes and the counter ("5 of 8") updates.
 - [ ] 12. Press Esc: the lightbox closes (instantly is expected in Firefox; only Chrome animates the close), and the teal ring is back on the tile you opened.
-- [ ] 13. Open it again and click the dark area outside the panel: it closes.
+- [ ] 13. Open it again and click the dark area outside the panel: it closes. Open it once more and click "Commission this style": the lightbox closes, the page lands on the "Say hello" section, and one press of Tab puts the ring on the Email button (the email address before it had focus).
 
 **Carousel, FAQ and footer**
 
@@ -52,11 +52,11 @@ Every milestone so far was checked in Chrome. This list covers the places where 
 
 - [ ] 24. Tap a tile: the lightbox covers the whole screen, with the art on top and the details below. No caption slid up on the tile when you tapped it.
 - [ ] 25. Try to scroll: only the lightbox scrolls. Close it afterwards and check the page is still where you left it (it didn't jump to the top).
-- [ ] 26. On a portrait or pet piece, the green Etsy button is fully visible at the bottom, not hidden behind Safari's toolbar. If the sheet is tall enough to scroll, the button stays pinned to the bottom while the details scroll past. (Logo pieces show two package cards instead, which aren't pinned.)
+- [ ] 26. On a portrait or pet piece, the green "Commission this style" button is fully visible at the bottom, not hidden behind Safari's toolbar. If the sheet is tall enough to scroll, the button stays pinned to the bottom while the details scroll past. (Logo pieces show two package cards instead, which aren't pinned.)
 - [ ] 27. Swipe left on the art: the next piece appears. Swipe right: back again. Swiping up or down scrolls the sheet instead.
 - [ ] 28. Pinch the art with two fingers: it zooms (it's allowed to), and letting go doesn't change the piece.
 - [ ] 29. Scroll so Safari's address bar shrinks and grows: the art doesn't jump around badly or get cut off.
-- [ ] 30. Turn the phone sideways: the lightbox still fits, and you can reach the close button and the Etsy button. Turn it back.
+- [ ] 30. Turn the phone sideways: the lightbox still fits, and you can reach the close button and the "Commission this style" button. Turn it back.
 - [ ] 31. Tap the × at the top right: the lightbox closes.
 
 **Carousel and FAQ**
