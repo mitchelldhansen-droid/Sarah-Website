@@ -43,9 +43,16 @@ One site that works as both Sarah's portfolio and her shop front. Etsy handles a
 
 - [ ] One-line description for each offering
 - [ ] Etsy listing link for each offering, plus the main shop link
-- [ ] Commission example images, 1 or 2 per offering depending on what she has (Mitchell, Sept 28, 2026; was 3–6), each tagged with its offering
+- [ ] Commission example images, 1 or 2 per offering depending on what she has (Mitchell, Sept 28, 2026; was 3–6), each tagged with its offering. **Partly in (Nov 12, 2026):** 8 pieces are in the gallery: solo 1, duo 2 (her `duo-portrait_04` and `_06`, of 6 sent), animal face 2 (her `pet_face_01` and `_02`, of 3), full body 1, custom 2. **Still needed: logo examples** (until then the Logos chip is hidden), and a second solo and full-body piece if she has them. File names keep her numbers; only `pet_face`, `pet_fullbody` and `custom_commission` were renamed to the offering ids.
+- [ ] Sarah to approve the thumbnail crops (most are a full-width square centred on the subject; Buddy, `animal-face_02`, has white added above and below instead of a crop, so his name and ears stay in)
 - [ ] 5–10 personal pieces with titles and years
-- [ ] Three hero pieces and an About photo (or self-portrait)
+- [ ] Three hero pieces and an About photo (or self-portrait). **Heroes 1 and 3 are in (Nov 12, 2026).** Hero 2 is held back: it's the same piece as gallery `custom-commission_01`, but its caption has different names and a different date from her gallery version. About photo still needed.
+
+**Questions for Sarah (from her Nov 2 image folder):**
+
+- Hero 2: is its caption OK to publish, or can she re-export it to match the gallery version? Both versions spell "Yosmite"; does she want that fixed?
+- Her `people/`, `pets/` and `objects/` folders: which, if any, are personal work for the carousel (with titles and years)? Candidates not already in the gallery: `couple_custom_painting`, `mothers day copy`, `cutenudesprint5x7` (is this one meant for the site?), `mitchell.jpg` (what is it?), `bubba_the_bard`, `raylan`, `rosie4x4`, and the fig, "I love you mom" and angel wings designs.
+- A larger export of `duo-portrait_02` (it's 1200 px; the lightbox wants 1400) if she'd like it in the gallery later.
 - [ ] Intro line, About text (3–5 sentences in her voice), FAQ answers
 - [ ] Contact email and Instagram handle
 - [ ] Domain name

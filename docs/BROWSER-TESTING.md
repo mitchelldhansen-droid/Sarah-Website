@@ -23,7 +23,7 @@ Every milestone so far was checked in Chrome. This list covers the places where 
 - [ ] 8. With the window full width, hover over a tile: it lifts slightly and a caption slides up from the bottom.
 - [ ] 9. Click a tile: the lightbox fades and grows in, and the page behind darkens.
 - [ ] 10. Try to scroll the page with the mouse wheel while the lightbox is open: the page behind doesn't move.
-- [ ] 11. Press the right and left arrow keys: the piece changes and the counter ("5 of 12") updates.
+- [ ] 11. Press the right and left arrow keys: the piece changes and the counter ("5 of 8") updates.
 - [ ] 12. Press Esc: the lightbox closes (instantly is expected in Firefox; only Chrome animates the close), and the teal ring is back on the tile you opened.
 - [ ] 13. Open it again and click the dark area outside the panel: it closes.
 
@@ -46,7 +46,7 @@ Every milestone so far was checked in Chrome. This list covers the places where 
 - [ ] 20. The page loads with the right fonts and nothing is wider than the screen: dragging sideways doesn't move the page.
 - [ ] 21. Tap the menu button: the menu opens under the header. Tap "FAQ": the menu closes and the page scrolls to the FAQ.
 - [ ] 22. Open the menu again and tap somewhere outside it: it closes.
-- [ ] 23. Tap the "Logos" chip: the chips sit in one row that you can drag sideways, and only logo tiles stay.
+- [ ] 23. Drag the chips sideways and tap "Custom": the chips sit in one row, and only custom tiles stay.
 
 **Lightbox (the phone version is a full-screen sheet)**
 
@@ -73,9 +73,9 @@ Every milestone so far was checked in Chrome. This list covers the places where 
 
 Turn it on in Settings → Accessibility → VoiceOver. Swipe right to move to the next item, double-tap to activate. Turn it off the same way when you're done.
 
-- [ ] 36. Swipe through the gallery: each tile is read as a button with its description, offering and price.
+- [ ] 36. Swipe through the gallery: each tile is read as a button with its description (once alt text is written), offering and price.
 - [ ] 37. Double-tap a tile: VoiceOver says it's in a dialog and reads the title. Swiping right never reaches the page behind.
-- [ ] 38. Double-tap "Next piece": it reads the new title and "6 of 12".
+- [ ] 38. Double-tap "Next piece": it reads the new title and "6 of 8".
 
 ## If you have them
 
